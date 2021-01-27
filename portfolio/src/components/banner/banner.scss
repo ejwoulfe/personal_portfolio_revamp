@@ -1,0 +1,62 @@
+@import '../../util/varibales';
+
+#banner_container {
+    background-color: #283343;
+    position: relative;
+}
+
+#banner_image {
+    height: 50rem;
+    background: linear-gradient(84.33deg, rgba(0, 0, 0, 0.46) 41.50%, rgba(0, 0, 0, 0.24) 50%),
+        linear-gradient(264.25deg, rgba(0, 0, 0, 0.46) 41.50%, rgba(0, 0, 0, 0.24) 50%),
+        url('../../assets/coding_laptop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #283343;
+    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 65%, 0 100%);
+    margin-bottom: -8rem;
+}
+
+#personal_information {
+    color: white;
+    font-family: $title-font;
+    font-weight: $bold;
+    font-size: 1.4rem;
+    position: absolute;
+
+
+    #self_portrait {
+        position: absolute;
+        width: 23rem;
+        height: 24rem;
+        bottom: -7rem;
+        left: 1rem;
+        object-fit: cover;
+        border: .7rem solid #F4F4F4;
+        box-sizing: border-box;
+        border-radius: 273px;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    #name_and_role {
+        position: absolute;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        left: 28rem;
+        bottom: -6rem;
+        width: 30rem;
+
+        #name {
+            padding-bottom: 2rem;
+        }
+
+        #role {
+            padding-left: 8rem;
+        }
+    }
+
+}
