@@ -5,6 +5,7 @@ import mongodb from '../../../assets/icons/mongodb.svg';
 
 function fillBackEndLanguages(obj){
     obj = {
+        type: "Back End",
         weekly: {
             "Node": node
         },

@@ -7,6 +7,7 @@ import bootstrap from '../../../assets/icons/bootstrap.svg';
 
 function fillFrontEndLanguages(obj){
     obj = {
+        type: "Front End",
         weekly: {
             "HTML5": html5,
             "CSS3": css3,

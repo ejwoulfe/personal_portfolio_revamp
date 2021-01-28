@@ -7,6 +7,7 @@ import jira from '../../../assets/icons/jira.svg';
 
 function fillToolSoftware(obj){
     obj = {
+        type: "Tools",
         weekly: {
             "Github": github,
             "Git": git,

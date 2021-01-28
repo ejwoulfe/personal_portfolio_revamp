@@ -22,9 +22,12 @@ function Skills() {
 
     return (
         <div id="skills_container">
-            <TechnologyCard frontEnd={frontEndLanguages} />
-            <TechnologyCard backEnd={backEndLanguages} />
-            <TechnologyCard tools={toolSoftware} />
+            <div id="header"> <h1 id="skills_title">Skills</h1></div>
+            <div id="card_container">
+                <TechnologyCard {...frontEndLanguages} />
+                {/* <TechnologyCard {...backEndLanguages} />
+                <TechnologyCard {...toolSoftware} /> */}
+            </div>
 
         </div>
     );
