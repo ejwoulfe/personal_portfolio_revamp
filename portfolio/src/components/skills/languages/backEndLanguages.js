@@ -5,10 +5,14 @@ import mongodb from '../../../assets/icons/mongodb.svg';
 
 function fillBackEndLanguages(obj){
     obj = {
-        "Node": node,
-        "PHP": php,
-        "MySQL": mysql,
-        "MongoDB": mongodb
+        weekly: {
+            "Node": node
+        },
+        past: {
+            "PHP": php,
+            "MySQL": mysql,
+            "MongoDB": mongodb
+        }
     }
     return obj;
 }

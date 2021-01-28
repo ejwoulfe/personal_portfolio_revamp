@@ -7,12 +7,16 @@ import jira from '../../../assets/icons/jira.svg';
 
 function fillToolSoftware(obj){
     obj = {
-        "Github": github,
-        "Git": git,
-        "npm": npm,
-        "Figma": figma,
-        "Photoshop": photoshop,
-        "Jira": jira
+        weekly: {
+            "Github": github,
+            "Git": git,
+            "npm": npm,
+            "Figma": figma
+        },
+        past: {
+            "Photoshop": photoshop,
+            "Jira": jira
+        }
     }
     return obj;
 }
