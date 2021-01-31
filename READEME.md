@@ -9,7 +9,7 @@ It can be found at edwoulfe.com, it is currently live.
  ## Built With
  
  Front End:
-HTML, CSS, React, Sass
+HTML, CSS, React, Sass/Scss
 
 Tools:
 Figma, Github, Git, NPM

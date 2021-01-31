@@ -1,0 +1,34 @@
+@import '../../util/varibales';
+
+#navigation_container {
+    background-color: #00000060;
+    height: 5rem;
+    position: absolute;
+    width: 100%;
+    color: white;
+    z-index: 1;
+    max-width: $max-width-large;
+    margin: auto;
+
+
+    #nav_list {
+        margin-top: 0rem;
+        padding-right: 2rem;
+        height: 100%;
+        width: 20rem;
+        list-style-type: none;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        float: right;
+        font-family: $title-font;
+        font-weight: $bold;
+        font-size: 22px;
+
+
+    }
+
+
+
+}
