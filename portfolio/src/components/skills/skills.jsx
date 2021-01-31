@@ -25,8 +25,8 @@ function Skills() {
             <div id="header"> <h1 id="skills_title">Skills</h1></div>
             <div id="card_container">
                 <TechnologyCard {...frontEndLanguages} />
-                {/* <TechnologyCard {...backEndLanguages} />
-                <TechnologyCard {...toolSoftware} /> */}
+                <TechnologyCard {...backEndLanguages} />
+                <TechnologyCard {...toolSoftware} />
             </div>
 
         </div>

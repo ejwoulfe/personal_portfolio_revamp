@@ -2,7 +2,7 @@
 
 #skills_container {
     max-width: $max-width-large;
-    height: 45rem;
+    height: 100rem;
     background-color: #F8F8F8;
     margin-top: 8rem;
     text-align: center;
@@ -45,6 +45,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
 

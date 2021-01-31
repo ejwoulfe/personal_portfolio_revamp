@@ -5,18 +5,20 @@ function TechnologyCard(props) {
 
     function createLanguageIcon(languages) {
         if (languages !== undefined) {
+            let jsxArray = [];
             for (let name in languages) {
                 let languageIcon = languages[name];
-                return (
+                jsxArray.push(
                     <span className="language_container">
                         <img src={languageIcon} alt={name}></img>
                         <h5>{name}</h5>
                     </span>
                 )
-                continue;
-            }
 
+            }
+            return jsxArray;
         }
+
 
     }
     return (
@@ -30,8 +32,11 @@ function TechnologyCard(props) {
 
 
                 </div>
+                <h4 className="past_usage_title">Daily/Weekly Usage</h4>
                 <div className="past_usage_container">
 
+
+                    {createLanguageIcon(props.past)}
                 </div>
             </div>
 
