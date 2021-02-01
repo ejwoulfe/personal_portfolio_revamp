@@ -21,9 +21,9 @@ function Skills() {
 
 
     return (
-        <div id="skills_container">
-            <div id="header"> <h1 id="skills_title">Skills</h1></div>
-            <div id="card_container">
+        <div id="skills">
+            <div className="header"> <h1 className="header_text">Skills</h1></div>
+            <div id="cards">
                 <TechnologyCard {...frontEndLanguages} />
                 <TechnologyCard {...backEndLanguages} />
                 <TechnologyCard {...toolSoftware} />

@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
+import reportWebVitals from './reportWebVitals';
 import Navigation from './components/navigation/navigation';
 import Banner from './components/banner/banner';
-import reportWebVitals from './reportWebVitals';
 import Skills from './components/skills/skills';
+import Projects from './components/projects/projects';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.render(
       <Navigation></Navigation>
       <Banner></Banner>
       <Skills></Skills>
+      <Projects></Projects>
     </div>
   </React.StrictMode>,
   document.getElementById('root')

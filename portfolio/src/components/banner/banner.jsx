@@ -7,10 +7,10 @@ function Banner() {
 
     return (
 
-        <div id="banner_container">
+        <div id="banner">
             <div id="banner_image">
             </div>
-            <div id="personal_information">
+            <div id="personal_info">
                 <img id="self_portrait" src={self_image} alt="Me on a mountain"></img>
                 <div id="name_and_role">
                     <h1 id="name" >Ed Woulfe</h1>

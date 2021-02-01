@@ -1,0 +1,37 @@
+@import '../../util/varibales';
+
+#projects {
+    max-width: $max-width-large;
+    background-color: #EAEAEA;
+    text-align: center;
+
+
+    .header {
+        @include header_style;
+
+        .header_text {
+            @include title_text;
+        }
+    }
+
+    .project_info {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 80%;
+        width: 100%;
+        justify-content: space-around;
+        padding-bottom: 4rem;
+
+        .left_panel,
+        .right_panel {
+            height: 50rem;
+            flex-basis: 48%;
+            flex-shrink: 0;
+            flex-grow: 0;
+            min-width: 55rem;
+            background-color: blanchedalmond;
+            // height: 100%;
+        }
+    }
+}
