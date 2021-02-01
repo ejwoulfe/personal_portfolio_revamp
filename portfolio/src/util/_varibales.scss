@@ -13,3 +13,37 @@ sans-serif;
 $regular: 400;
 $semi-bold: 600;
 $bold: 700;
+
+// Header Mixins
+@mixin header_style {
+
+    max-width: 98%;
+    margin: auto;
+}
+
+@mixin title_text {
+    padding-top: 3rem;
+    font-family: $sub-title-font;
+    font-weight: $regular;
+    font-size: 2rem;
+    margin-top: 0rem;
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+    &:before,
+    &:after {
+        content: '';
+        border-top: 1px solid #838383;
+        margin: 0 20px 0 0;
+        flex: 1 0 20px;
+    }
+
+    &:after {
+        margin: 0 0 0 20px;
+    }
+}

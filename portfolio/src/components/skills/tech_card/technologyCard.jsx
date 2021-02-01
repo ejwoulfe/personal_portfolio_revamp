@@ -9,7 +9,7 @@ function TechnologyCard(props) {
             for (let name in languages) {
                 let languageIcon = languages[name];
                 jsxArray.push(
-                    <span className="language_container">
+                    <span className="language">
                         <img src={languageIcon} alt={name}></img>
                         <h5>{name}</h5>
                     </span>
@@ -23,17 +23,17 @@ function TechnologyCard(props) {
     }
     return (
 
-        <div className="tech_card_container">
+        <div className="tech_card">
             <h3 className="card_title">{props.type}</h3>
-            <div className="tech_stack_container">
-                <h4 className="weekly_usage_title">Daily/Weekly Usage</h4>
-                <div className="weekly_usage_container">
+            <div className="tech_stack">
+                <h4 className="weekly_title">Daily/Weekly Usage</h4>
+                <div className="weekly_usage">
                     {createLanguageIcon(props.weekly)}
 
 
                 </div>
-                <h4 className="past_usage_title">Daily/Weekly Usage</h4>
-                <div className="past_usage_container">
+                <h4 className="past_title">Daily/Weekly Usage</h4>
+                <div className="past_usage">
 
 
                     {createLanguageIcon(props.past)}

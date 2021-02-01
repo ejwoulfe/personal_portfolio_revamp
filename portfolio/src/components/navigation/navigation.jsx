@@ -3,7 +3,7 @@ import './navigation.scss';
 
 function Navigation() {
     return (
-        <div id="navigation_container">
+        <div id="navigation">
 
             <ul id="nav_list">
                 <li className="nav_links">Projects</li>
