@@ -9,14 +9,14 @@ function fillToolSoftware(obj){
     obj = {
         type: "Tools",
         weekly: {
-            "Github": github,
-            "Git": git,
-            "npm": npm,
-            "Figma": figma
+            Github: github,
+            Git: git,
+            npm: npm,
+            Figma: figma
         },
         past: {
-            "Photoshop": photoshop,
-            "Jira": jira
+            Photoshop: photoshop,
+            Jira: jira
         }
     }
     return obj;

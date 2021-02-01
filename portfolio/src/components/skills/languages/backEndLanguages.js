@@ -7,12 +7,12 @@ function fillBackEndLanguages(obj){
     obj = {
         type: "Back End",
         weekly: {
-            "Node": node
+            Node: node
         },
         past: {
-            "PHP": php,
-            "MySQL": mysql,
-            "MongoDB": mongodb
+            PHP: php,
+            MySQL: mysql,
+            MongoDB: mongodb
         }
     }
     return obj;

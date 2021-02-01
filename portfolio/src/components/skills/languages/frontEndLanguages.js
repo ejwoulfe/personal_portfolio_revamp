@@ -9,14 +9,14 @@ function fillFrontEndLanguages(obj){
     obj = {
         type: "Front End",
         weekly: {
-            "HTML5": html5,
-            "CSS3": css3,
-            "Javascript": javascript,
-            "React": react,
-            "Sass": sass
+            HTML5: html5,
+            CSS3: css3,
+            Javascript: javascript,
+            React: react,
+            Sass: sass
         },
         past: {
-            "Bootstrap": bootstrap
+            Bootstrap: bootstrap
         }
     }
     return obj;
