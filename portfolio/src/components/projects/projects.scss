@@ -25,13 +25,11 @@
 
         .left_panel,
         .right_panel {
-            height: 50rem;
             flex-basis: 48%;
             flex-shrink: 0;
             flex-grow: 0;
             min-width: 55rem;
             background-color: rgba(87, 87, 87, 0.349);
-            // height: 100%;
         }
     }
 }

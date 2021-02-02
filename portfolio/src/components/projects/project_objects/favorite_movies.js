@@ -7,7 +7,7 @@ import node from '../../../assets/icons/node.svg';
 import mongodb from '../../../assets/icons/mongodb.svg';
 import projectImage from '../../../assets/project_images/favorite-movies.png';
 
-function createLolChampionsObject(object){
+function createFavoriteMoviesObject(object){
      object = {
         name: "Favorite Movies",
         image: projectImage,
@@ -29,4 +29,4 @@ function createLolChampionsObject(object){
     return object;
 }
 
-export default createLolChampionsObject;
+export default createFavoriteMoviesObject;

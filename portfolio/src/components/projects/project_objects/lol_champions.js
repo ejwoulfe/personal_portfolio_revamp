@@ -6,7 +6,7 @@ import sass from '../../../assets/icons/sass.svg';
 import bootstrap from '../../../assets/icons/bootstrap.svg';
 import projectImage from '../../../assets/project_images/lol-champions.png';
 
-function createFavMoviesObject(object){
+function createLolChampionsObject(object){
      object = {
         name: "LoL Champions",
         image: projectImage,
@@ -26,4 +26,4 @@ function createFavMoviesObject(object){
     return object;
 }
 
-export default createFavMoviesObject;
+export default createLolChampionsObject;

@@ -8,19 +8,21 @@ function TechnologyCard(props) {
             let jsxArray = [];
             for (let name in languages) {
                 let languageIcon = languages[name];
+
                 jsxArray.push(
-                    <span className="language">
+
+                    <span key={name} className="language">
                         <img src={languageIcon} alt={name}></img>
                         <h5>{name}</h5>
                     </span>
-                )
 
+                )
             }
+
             return jsxArray;
         }
-
-
     }
+
     return (
 
         <div className="tech_card">
@@ -32,7 +34,7 @@ function TechnologyCard(props) {
 
 
                 </div>
-                <h4 className="past_title">Daily/Weekly Usage</h4>
+                <h4 className="past_title">Used in Past Projects/School</h4>
                 <div className="past_usage">
 
 

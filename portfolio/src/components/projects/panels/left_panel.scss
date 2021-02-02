@@ -1,0 +1,48 @@
+@import '../../../util/varibales';
+
+.project_name {
+    text-align: left;
+    padding-left: 2rem;
+    font-family: $title-font;
+    font-weight: $bold;
+    font-size: 2.7rem;
+    margin-bottom: 0.3rem;
+}
+
+.project_image {
+    height: 30rem;
+    width: 55rem;
+    filter: drop-shadow(4px 6px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+
+}
+
+.tech_title {
+    font-family: $title-font;
+    text-align: left;
+    padding-left: 10rem;
+    font-weight: $bold;
+}
+
+.project_tech {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-bottom: 2rem;
+    justify-content: center;
+
+    .technology {
+        height: 8.5rem;
+        flex: 25% 0 0;
+        padding-bottom: 1rem;
+
+        img {
+            height: 5rem;
+            width: 5rem;
+            @include icon-style;
+        }
+
+    }
+}
