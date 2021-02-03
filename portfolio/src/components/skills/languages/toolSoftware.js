@@ -4,6 +4,7 @@ import npm from '../../../assets/icons/npm.svg';
 import figma from '../../../assets/icons/figma.svg';
 import photoshop from '../../../assets/icons/photoshop.svg';
 import jira from '../../../assets/icons/jira.svg';
+import gitlab from '../../../assets/icons/gitlab.svg';
 
 function fillToolSoftware(obj){
     obj = {
@@ -16,7 +17,8 @@ function fillToolSoftware(obj){
         },
         past: {
             Photoshop: photoshop,
-            Jira: jira
+            Jira: jira,
+            Gitlab: gitlab
         }
     }
     return obj;

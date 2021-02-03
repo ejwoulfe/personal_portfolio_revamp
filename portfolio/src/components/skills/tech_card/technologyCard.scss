@@ -49,13 +49,16 @@
         }
 
 
-        .language {
+        .technology {
             height: 8.5rem;
             flex: 20% 1;
 
             img {
-                height: 5rem;
-                width: 5rem;
+                @include tech-icon;
+            }
+
+            h5 {
+                @include tech-name;
             }
 
         }

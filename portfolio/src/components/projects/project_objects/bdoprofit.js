@@ -4,6 +4,7 @@ import javascript from '../../../assets/icons/javascript.svg';
 import bootstrap from '../../../assets/icons/bootstrap.svg';
 import php from '../../../assets/icons/php.svg';
 import mysql from '../../../assets/icons/mysql.svg';
+import jquery from '../../../assets/icons/jquery.svg';
 import projectImage from '../../../assets/project_images/bdoprofit.png';
 
 function createBDOProfitObject(object){
@@ -15,6 +16,7 @@ function createBDOProfitObject(object){
             CSS3: css3,
             Javascript: javascript,
             Bootstrap: bootstrap,
+            jQuery: jquery,
             PHP: php,
             MySQL: mysql
         },

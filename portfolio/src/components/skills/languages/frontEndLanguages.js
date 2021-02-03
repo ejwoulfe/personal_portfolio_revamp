@@ -4,6 +4,7 @@ import javascript from '../../../assets/icons/javascript.svg';
 import react from '../../../assets/icons/react.svg';
 import sass from '../../../assets/icons/sass.svg';
 import bootstrap from '../../../assets/icons/bootstrap.svg';
+import jquery from '../../../assets/icons/jquery.svg';
 
 function fillFrontEndLanguages(obj){
     obj = {
@@ -16,7 +17,8 @@ function fillFrontEndLanguages(obj){
             Sass: sass
         },
         past: {
-            Bootstrap: bootstrap
+            Bootstrap: bootstrap,
+            jQuery: jquery
         }
     }
     return obj;

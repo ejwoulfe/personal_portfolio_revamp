@@ -3,16 +3,16 @@ import './technologyCard.scss';
 
 function TechnologyCard(props) {
 
-    function createLanguageIcon(languages) {
-        if (languages !== undefined) {
+    function createTechIcon(techStack) {
+        if (techStack !== undefined) {
             let jsxArray = [];
-            for (let name in languages) {
-                let languageIcon = languages[name];
+            for (let name in techStack) {
+                let techIcon = techStack[name];
 
                 jsxArray.push(
 
-                    <span key={name} className="language">
-                        <img src={languageIcon} alt={name}></img>
+                    <span key={name} className="technology">
+                        <img src={techIcon} alt={name}></img>
                         <h5>{name}</h5>
                     </span>
 
@@ -30,7 +30,7 @@ function TechnologyCard(props) {
             <div className="tech_stack">
                 <h4 className="weekly_title">Daily/Weekly Usage</h4>
                 <div className="weekly_usage">
-                    {createLanguageIcon(props.weekly)}
+                    {createTechIcon(props.weekly)}
 
 
                 </div>
@@ -38,7 +38,7 @@ function TechnologyCard(props) {
                 <div className="past_usage">
 
 
-                    {createLanguageIcon(props.past)}
+                    {createTechIcon(props.past)}
                 </div>
             </div>
 
