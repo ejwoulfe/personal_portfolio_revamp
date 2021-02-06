@@ -15,9 +15,9 @@ function RightPanel(props) {
                 <p>{props.goals}</p>
             </div>
 
-            <div className="challenges">
-                <h3>Challenges</h3>
-                <p>{props.challenges}</p>
+            <div className="accomplishments">
+                <h3>Accomplishments</h3>
+                <p>{props.accomplishments}</p>
             </div>
         </div>
     )

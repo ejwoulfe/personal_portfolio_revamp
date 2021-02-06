@@ -21,8 +21,8 @@ function createFavoriteMoviesObject(object){
             MongoDB: mongodb
         },
         description: "Favorite Movies is a full stack website which holds information on some popular movies and their featured actors. If a user finds a parsticular movie they really enjoyed, and they are logged in, they will be able to \"favorite\" them. Each user will have their favorite movies displayed on their account page.",
-        goals: ["Learn React Hooks", "Learn how non-relational databases interact with the front end.", "Understand the process of authentication.", "Create my own API.", "Create reusable/scalable components."],
-        challenges: ["Being more mindful about the scalability and reusability of my code and react components.","Creating a server with mongodb and express that will connect my front end with my backend API.","Maintaining code readability with conditional rendering." ,"Holding a consistant folder and component managment flow throught the project. (Not having too many working parts in one component)."]
+        goals: ["Learn React Hooks", "Learn how non-relational databases interact with the front end.", "Understand the process of authentication.", "Create my own API.", "Create reusable/scalable components.", "Learn better folder and component management."],
+        accomplishments: ["Create scalable and reusable components.", "Mades use of sass's mixins and variables.","Created a server with mongodb and express that connects my front end with my backend API.","Created more complex components with conditional rendering." ,"Held a consistant folder and component managment flow throught the project. (Not having too many working parts in one component, seperated js objects to seperate folders/files.)."]
 
     }
     return object;

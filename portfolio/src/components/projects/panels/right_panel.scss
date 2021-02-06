@@ -1,35 +1,35 @@
-@import '../../../util/varibales';
+@import "../../../util/varibales";
 
 .right_panel {
-    text-align: left;
+  text-align: left;
 
-    .description {
-        padding: 4rem 0rem 3rem 0rem;
-        max-width: 70%;
-        margin: 0 auto;
+  .description {
+    padding: 4rem 0rem 3rem 0rem;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .goals,
+  .accomplishments {
+    padding: 3rem 0rem 3rem 0rem;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  h3 {
+    font-family: $sub-title-font;
+    font-weight: $regular;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+
+    &:after {
+      content: "";
+      border-bottom: 1.5px solid #000000;
+      margin-bottom: 5px;
+      margin-left: 5px;
+      flex: 1 0 20px;
     }
-
-    .goals,
-    .challenges {
-        padding: 3rem 0rem 3rem 0rem;
-        max-width: 70%;
-        margin: 0 auto;
-    }
-
-    h3 {
-        font-family: $sub-title-font;
-        font-weight: $regular;
-        font-size: 1.4rem;
-        display: flex;
-        align-items: flex-end;
-        width: 100%;
-
-        &:after {
-            content: '';
-            border-bottom: 1.5px solid #000000;
-            margin-bottom: 5px;
-            margin-left: 5px;
-            flex: 1 0 20px;
-        }
-    }
+  }
 }
