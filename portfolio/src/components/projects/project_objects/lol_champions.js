@@ -18,9 +18,9 @@ function createLolChampionsObject(object){
             Sass: sass,
             Bootstrap: bootstrap
         },
-        description: "Website which you can look up info about League of Legends champions.",
-        goals: "Learn React. Get more familiar working with APIs. Learn about client based storage options.",
-        challenges: "Obtimizing number of fetch requests with a limit. Learning the React framework."
+        description: "Using the Riot Games public API, this website displays which champions are free for the current week, which champions are currently being played the most in the chosen ranked tier, and detailed information on all of the games playable champions.",
+        goals: ["Learn React.", "Learn how to fetch data from an API.", "Filter fetch requests.", "Limiting the amount of requests being sent.", "Utilize local and session storage."],
+        challenges: ["Learning the react frameworks.", "Parsing data to storage and back into JSON.", "Finding strategies to work with the limit on fetch requests.", "Worked with a public library for a carousel feature."]
 
     }
     return object;

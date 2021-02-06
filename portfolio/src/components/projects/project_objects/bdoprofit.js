@@ -20,12 +20,11 @@ function createBDOProfitObject(object){
             PHP: php,
             MySQL: mysql
         },
-        description: "Website to help players calculate profits of selling an in-game item on the marketplace.",
-        goals: "Learn about relational databases. Learn how to create my own database. Learn about webscrapping using Puppeteer. " +
-        "Learn how the front and back end of an application work and come together. Create a full stack web application from scratch.",
-        challenges: "Creating an item relational database by web scrapping item information from a website. " + 
-        "Creating relationships between recipes, sub materials, rewards, and marketplace values. " +
-        "Building a full stack website from scratch."
+        description: "Website to help players calculate if making an in-game craft will be profitable if they were to sell it on the marketplace.",
+        goals: ["Learn about relational databases.", "Create my own database.", "Use webscrapping to collect a large amount of data.", "Learn how the front and back end of an application work and come together.", "Create a full stack web application from scratch."],
+        challenges: ["Creating several relationship schema between large amounts of data.",
+        "Creating relationships between recipes, sub materials, rewards, and marketplace values.",
+        "Building a full stack website from scratch."]
 
     }
     return object;

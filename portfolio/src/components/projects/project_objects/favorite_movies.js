@@ -20,10 +20,9 @@ function createFavoriteMoviesObject(object){
             Node: node,
             MongoDB: mongodb
         },
-        description: "Website which you can look up info about your favorite movies.",
-        goals: "Learn React hooks, learn how a non relational database works, understand how auth works.",
-        challenges: "Adding more scalability to my components with reusable code so I would only need to edit one place instead of several. " +
-                        "No copying and pasting from one component to the next because they are so similar."
+        description: "Favorite Movies is a full stack website which holds information on some popular movies and their featured actors. If a user finds a parsticular movie they really enjoyed, and they are logged in, they will be able to \"favorite\" them. Each user will have their favorite movies displayed on their account page.",
+        goals: ["Learn React Hooks", "Learn how non-relational databases interact with the front end.", "Understand the process of authentication.", "Create my own API.", "Create reusable/scalable components."],
+        challenges: ["Being more mindful about the scalability and reusability of my code and react components.","Creating a server with mongodb and express that will connect my front end with my backend API.","Maintaining code readability with conditional rendering." ,"Holding a consistant folder and component managment flow throught the project. (Not having too many working parts in one component)."]
 
     }
     return object;
