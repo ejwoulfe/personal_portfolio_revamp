@@ -7,7 +7,6 @@ It can be found at edwoulfe.com, it is currently live.
  None required, the website is live at https://edwoulfe.com/
  
  ## Built With
- 
  Front End:
 HTML, CSS, React, Sass/Scss
 
