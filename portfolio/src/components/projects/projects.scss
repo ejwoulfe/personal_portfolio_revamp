@@ -25,6 +25,10 @@
         padding-top: 5rem;
         box-shadow: 0rem 4px 6px -5px #000000;
 
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
         .left_panel,
         .right_panel {
             flex-basis: 48%;

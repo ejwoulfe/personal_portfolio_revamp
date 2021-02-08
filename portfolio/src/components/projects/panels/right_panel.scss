@@ -3,17 +3,29 @@
 .right_panel {
   text-align: left;
 
+
   .description {
-    padding: 4rem 0rem 3rem 0rem;
+    padding: 4rem 0rem 1rem 0rem;
     max-width: 70%;
     margin: 0 auto;
+    font-family: $description-font;
+    font-weight: $regular;
+    font-size: 1.2rem;
   }
 
   .goals,
   .accomplishments {
-    padding: 3rem 0rem 3rem 0rem;
+    padding: 2rem 0rem 1.5rem 0rem;
     max-width: 70%;
     margin: 0 auto;
+    font-family: $description-font;
+    font-weight: $regular;
+    font-size: 1.2rem;
+
+    .list_item {
+      padding: .2rem 0rem .2rem 0rem;
+      list-style-type: square;
+    }
   }
 
   h3 {

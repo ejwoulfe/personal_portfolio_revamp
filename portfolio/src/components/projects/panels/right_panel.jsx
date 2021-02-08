@@ -3,6 +3,20 @@ import './right_panel.scss';
 
 function RightPanel(props) {
 
+
+    function arrayIntoListFormat(array) {
+        return (
+            <ul>
+                {array.map((value, index) => {
+                    return (
+                        <li className="list_item" key={index}>{value}</li>
+                    )
+                })}
+            </ul>
+        )
+
+    }
+
     return (
         <div className="right_panel">
             <div className="description">
@@ -12,12 +26,13 @@ function RightPanel(props) {
 
             <div className="goals">
                 <h3>Goals</h3>
-                <p>{props.goals}</p>
+                {arrayIntoListFormat(props.goals)}
             </div>
 
             <div className="accomplishments">
                 <h3>Accomplishments</h3>
-                <p>{props.accomplishments}</p>
+                {arrayIntoListFormat(props.accomplishments)}
+
             </div>
         </div>
     )
