@@ -6,6 +6,7 @@ import Navigation from './components/navigation/navigation';
 import Banner from './components/banner/banner';
 import Skills from './components/skills/skills';
 import Projects from './components/projects/projects';
+import About from './components/about/about';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
       <Banner></Banner>
       <Skills></Skills>
       <Projects></Projects>
+      <About></About>
     </div>
   </React.StrictMode>,
   document.getElementById('root')
