@@ -11,6 +11,9 @@
 # production
 /build
 
+# sensitive information
+emailjs_info.js
+
 # misc
 .DS_Store
 .env.local

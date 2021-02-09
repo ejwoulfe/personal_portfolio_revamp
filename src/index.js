@@ -7,6 +7,7 @@ import Banner from './components/banner/banner';
 import Skills from './components/skills/skills';
 import Projects from './components/projects/projects';
 import About from './components/about/about';
+import Contact from './components/contact/contact';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Skills></Skills>
       <Projects></Projects>
       <About></About>
+      <Contact></Contact>
     </div>
   </React.StrictMode>,
   document.getElementById('root')
