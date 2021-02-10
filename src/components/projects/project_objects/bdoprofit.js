@@ -20,6 +20,8 @@ function createBDOProfitObject(object){
             PHP: php,
             MySQL: mysql
         },
+        liveURL: "https://bdoprofit.com",
+        githubURL: "https://github.com/ejwoulfe/BDOProfit",
         description: "Website to help players calculate if making an in-game craft will be profitable if they were to sell it on the marketplace.",
         goals: ["Learn about relational databases.", "Create my own database.", "Research on how to collect a large amount of data around in-game items without access to a public API.", "Learn how the front and back end of an application work and come together.", "Create a full stack web application from scratch."],
         accomplishments: ["Planned and created multiple tables with one-to-many and many-to-many relationships.",

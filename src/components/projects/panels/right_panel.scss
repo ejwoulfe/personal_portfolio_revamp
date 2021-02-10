@@ -44,4 +44,32 @@
       flex: 1 0 20px;
     }
   }
+
+  .links {
+    padding: 2rem 0rem 1.5rem 0rem;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    span:hover {
+      cursor: pointer;
+    }
+
+
+    img {
+      width: 4rem;
+      height: 4rem;
+      padding: 0rem 2rem 1rem 2rem;
+    }
+
+    h4 {
+      margin: 0;
+      font-family: $description-font;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+  }
 }
