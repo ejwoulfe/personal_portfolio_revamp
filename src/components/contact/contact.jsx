@@ -8,9 +8,6 @@ function Contact() {
         <div id="contact">
             <div className="header"> <h1 className="header_text">Contact</h1></div>
             <div id="contact_container">
-                <div id="mail_image">
-                    <img id="mail_icon" src={email} alt="mail_icon"></img>
-                </div>
                 <div id="contact_form">
                     <ContactForm></ContactForm>
                 </div>

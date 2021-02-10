@@ -5,27 +5,34 @@ import userID from '../../../util/emailjs_info';
 
 function ContactForm() {
 
-    function sendEmail(event) {
+    async function sendEmail(event) {
         event.preventDefault();
 
-        emailjs.sendForm('gmail_id', 'template_aye077j', event.target, userID)
+        await emailjs.sendForm('gmail_id', 'template_aye077j', event.target, userID)
             .then((result) => {
-                console.log(result.text);
                 if (result.text === "OK") {
-                    disableButton();
                     event.target.reset();
                 }
             }, (error) => {
                 alert("Error: " + error.text);
             });
+        disableButton();
 
     }
 
     function disableButton() {
-        document.getElementById('send_button').id = 'send_button_disabled';
-        document.getElementById('send_button_disabled').value = 'Sent!';
+        document.getElementById('send_button').value = 'Sent!';
+        for (let i = 0; i < document.getElementsByTagName('input').length; i++) {
+            document.getElementsByTagName('input')[i].disabled = true;
+            document.getElementsByTagName('input')[i].style.backgroundColor = '#8888887c';
+        }
+        document.getElementsByTagName('textarea')[0].disabled = true;
+        document.getElementsByTagName('textarea')[0].style.backgroundColor = '#8888887c';
+
+
 
     }
+
 
     return (
 
