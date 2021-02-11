@@ -16,9 +16,44 @@
 
     #contact_container {
         display: inline-block;
-        padding-bottom: 4rem;
+        padding-bottom: 2rem;
         padding-top: 5rem;
         width: 100%;
 
+    }
+
+    #back_to_top_container {
+        text-align: center;
+        margin-top: 10rem;
+
+        #to_top_button {
+
+            height: 6rem;
+            width: 5rem;
+            border: none;
+            border-radius: 20rem;
+            background-color: #C4C4C4;
+
+            &:focus {
+                outline: none;
+                ;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            img {
+                height: 4rem;
+                width: 4rem;
+            }
+        }
+
+        p {
+            font-family: $title-font;
+            font-weight: $bold;
+            font-size: 1.1rem;
+            margin-top: 0rem;
+        }
     }
 }

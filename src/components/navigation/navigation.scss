@@ -9,26 +9,31 @@
     z-index: 1;
     max-width: $max-width-large;
     margin: auto;
+    display: flex;
+    justify-content: flex-end;
 
 
     #nav_list {
-        margin-top: 0rem;
-        padding-right: 2rem;
-        height: 100%;
-        width: 20rem;
-        list-style-type: none;
-
         display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
-        float: right;
+        margin-top: 0rem;
+        padding-right: 5rem;
+        height: 100%;
+        width: 25rem;
+        list-style-type: none;
         font-family: $title-font;
         font-weight: $bold;
-        font-size: 22px;
+        font-size: 2rem;
 
 
     }
 
+    .nav_links:hover {
+        cursor: pointer;
+    }
 
 
 }
