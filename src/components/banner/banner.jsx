@@ -7,7 +7,7 @@ import resume from '../../assets/icons/resume.svg';
 
 function Banner() {
 
-    function goToGithub(){
+    function goToGithub() {
         window.open("https://github.com/ejwoulfe");
     }
 
@@ -16,14 +16,15 @@ function Banner() {
         <div id="banner">
             <div id="banner_image">
                 <div id="banner_links">
-                    <span>
-                    <img src={githubWhite} onClick={() => goToGithub()} alt="link to my github"></img>
-                    <h5>Github</h5> 
-                </span>
-                <span>
-                    <img src={resume} alt="pdf file of my resume"></img>
-                    <h5>Resume</h5>
-                </span>
+                    <span id="resume_banner">
+                        <img src={resume} alt="pdf file of my resume"></img>
+                        <h5>Resume</h5>
+                    </span>
+                    <span id="github_banner">
+                        <img src={githubWhite} onClick={() => goToGithub()} alt="link to my github"></img>
+                        <h5>Github</h5>
+                    </span>
+
                 </div>
             </div>
             <div id="personal_info">
