@@ -3,7 +3,6 @@
 .right_panel {
   text-align: left;
 
-
   .description {
     padding: 4rem 0rem 1rem 0rem;
     max-width: 70%;
@@ -23,7 +22,7 @@
     font-size: 1.2rem;
 
     .list_item {
-      padding: .2rem 0rem .2rem 0rem;
+      padding: 0.2rem 0rem 0.2rem 0rem;
       list-style-type: square;
     }
   }
@@ -57,11 +56,11 @@
       cursor: pointer;
     }
 
-
     img {
-      width: 4rem;
-      height: 4rem;
-      padding: 0rem 2rem 1rem 2rem;
+      width: 5rem;
+      height: 5rem;
+      margin: 0rem 2rem 0rem 2rem;
+      padding: 0.5rem;
     }
 
     h4 {
@@ -70,6 +69,5 @@
       font-weight: bold;
       font-size: 1.2rem;
     }
-
   }
 }

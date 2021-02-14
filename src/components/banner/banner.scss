@@ -1,62 +1,90 @@
-@import '../../util/varibales';
+@import "../../util/varibales";
 
 #banner {
-    background-color: #283343;
-    position: relative;
+  background-color: #283343;
+  position: relative;
+  #banner_links {
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-top: 30rem;
+    span {
+      width: 10rem;
+      img {
+        @include tech-icon;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      h5 {
+        color: white;
+        @include tech-name;
+      }
+    }
+  }
 }
 
 #banner_image {
-    height: 60rem;
-    background: linear-gradient(84.33deg, rgba(0, 0, 0, 0.46) 41.50%, rgba(0, 0, 0, 0.24) 50%),
-        linear-gradient(264.25deg, rgba(0, 0, 0, 0.46) 41.50%, rgba(0, 0, 0, 0.24) 50%),
-        url('../../assets/coding_laptop.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #283343;
-    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 65%, 0 100%);
-    margin-bottom: -8rem;
+  height: 60rem;
+  background: linear-gradient(
+      84.33deg,
+      rgba(0, 0, 0, 0.46) 41.5%,
+      rgba(0, 0, 0, 0.24) 50%
+    ),
+    linear-gradient(
+      264.25deg,
+      rgba(0, 0, 0, 0.46) 41.5%,
+      rgba(0, 0, 0, 0.24) 50%
+    ),
+    url("../../assets/coding_laptop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #283343;
+  clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 65%, 0 100%);
+  margin-bottom: -8rem;
 }
 
 #personal_info {
-    color: white;
-    font-family: $title-font;
-    font-weight: $bold;
-    font-size: 1.4rem;
+  color: white;
+  font-family: $title-font;
+  font-weight: $bold;
+  font-size: 1.4rem;
+  position: absolute;
+
+  #self_portrait {
     position: absolute;
+    width: 23rem;
+    height: 24rem;
+    bottom: -7rem;
+    left: 1rem;
+    object-fit: cover;
+    border: 0.7rem solid #f4f4f4;
+    box-sizing: border-box;
+    border-radius: 273px;
+  }
 
+  h1 {
+    margin: 0;
+  }
 
-    #self_portrait {
-        position: absolute;
-        width: 23rem;
-        height: 24rem;
-        bottom: -7rem;
-        left: 1rem;
-        object-fit: cover;
-        border: .7rem solid #F4F4F4;
-        box-sizing: border-box;
-        border-radius: 273px;
+  #name_and_role {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    left: 28rem;
+    bottom: -3rem;
+    width: 30rem;
+
+    #name {
+      padding-bottom: 1rem;
     }
 
-    h1 {
-        margin: 0;
+    #role {
+      padding-left: 8rem;
     }
-
-    #name_and_role {
-        position: absolute;
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        left: 28rem;
-        bottom: -6rem;
-        width: 30rem;
-
-        #name {
-            padding-bottom: 1rem;
-        }
-
-        #role {
-            padding-left: 8rem;
-        }
-    }
-
+  }
 }
