@@ -57,6 +57,7 @@
   font-weight: $bold;
   font-size: 1.4rem;
   position: absolute;
+  width: 100%;
 
   #self_portrait {
     position: absolute;
@@ -81,7 +82,6 @@
     flex-direction: column;
     left: 25rem;
     bottom: -3rem;
-    width: 30rem;
 
     #name {
       padding-bottom: 2rem;

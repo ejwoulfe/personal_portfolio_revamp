@@ -19,22 +19,22 @@
         flex-wrap: wrap;
         flex-direction: row;
         padding-bottom: 4rem;
-        padding-top: 5rem;
+        padding-top: 2rem;
         justify-content: center;
         align-items: center;
+        height: 100%;
 
         #image_carousel,
         #about_text {
-            flex-basis: 48%;
-            flex-shrink: 0;
-            flex-grow: 0;
-            min-width: 55rem;
+            flex-basis: 40rem;
+            flex-shrink: 1;
+            flex-grow: 1;
 
         }
 
         #image_carousel img {
-            height: 45rem;
-            width: 45rem;
+            width: 80%;
+            height: 80%;
             box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
             border-radius: 10px;
             object-fit: cover;
@@ -76,6 +76,7 @@
             font-weight: $semi-bold;
             font-size: 1.2rem;
             padding-top: 5rem;
+            max-width: 95%;
 
         }
     }

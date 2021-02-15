@@ -1,12 +1,12 @@
 @import '../../../util/varibales';
 
-.contact-form {
+.contact_form {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     text-align: left;
-    width: 40%;
+    width: 45rem;
     margin: auto;
 
 
@@ -73,4 +73,10 @@
 
 
 
+}
+
+@media (max-width: 750px) {
+    .contact_form {
+        width: 95%;
+    }
 }

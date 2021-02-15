@@ -14,9 +14,9 @@ function Contact() {
         <div id="contact">
             <div className="header"> <h1 className="header_text">Contact</h1></div>
             <div id="contact_container">
-                <div id="contact_form">
-                    <ContactForm></ContactForm>
-                </div>
+
+                <ContactForm></ContactForm>
+
                 <div id="back_to_top_container">
                     <button id="to_top_button" onClick={() => toTopOfPage()}><img src={arrowUp} alt="button that naviagtes to the top of the page."></img></button>
                     <p>Back to Top</p>

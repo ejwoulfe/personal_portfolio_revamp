@@ -36,7 +36,7 @@ function ContactForm() {
 
     return (
 
-        <form className="contact-form" onSubmit={sendEmail}>
+        <form className="contact_form" onSubmit={sendEmail}>
             <label className="form_label">Name</label>
             <input className="form_field" type="text" name="name" />
             <label className="form_label">Email</label>
