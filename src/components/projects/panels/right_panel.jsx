@@ -62,13 +62,13 @@ function RightPanel(props) {
                 {arrayIntoListFormat(props.accomplishments)}
 
             </div>
-            <div className="links">
+            {/* <div className="links">
                 <span onClick={() => goToUrl(props.githubURL)}>
                     <img src={code} alt="link to github repository"></img>
                     <h4>Code</h4>
                 </span>
                 {createLiveWebsiteIcon(props.liveURL)}
-            </div>
+            </div> */}
         </div>
     )
 }

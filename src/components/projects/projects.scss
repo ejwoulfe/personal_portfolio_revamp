@@ -31,11 +31,16 @@
 
         .left_panel,
         .right_panel {
-            flex-basis: 48%;
-            flex-shrink: 0;
-            flex-grow: 0;
-            min-width: 55rem;
+            flex-basis: 40rem;
+            flex-shrink: 1;
+            flex-grow: 1;
 
         }
+    }
+}
+
+@media (max-width: 810px) {
+    .left_panel {
+        padding-bottom: 3rem;
     }
 }

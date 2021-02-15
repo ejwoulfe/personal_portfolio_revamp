@@ -64,3 +64,9 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .tech_card .tech_stack {
+        min-width: 30rem;
+    }
+}

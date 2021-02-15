@@ -5,7 +5,7 @@
 
   .description {
     padding: 4rem 0rem 1rem 0rem;
-    max-width: 70%;
+    max-width: 72%;
     margin: 0 auto;
     font-family: $description-font;
     font-weight: $regular;
@@ -15,7 +15,7 @@
   .goals,
   .accomplishments {
     padding: 2rem 0rem 1.5rem 0rem;
-    max-width: 70%;
+    max-width: 72%;
     margin: 0 auto;
     font-family: $description-font;
     font-weight: $regular;
@@ -70,4 +70,18 @@
       font-size: 1.2rem;
     }
   }
+}
+
+@media (max-width: 1500px) {
+
+
+  .project_info .right_panel {
+
+    .description,
+    .goals,
+    .accomplishments {
+      max-width: 90%;
+    }
+  }
+
 }
