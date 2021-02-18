@@ -32,17 +32,13 @@
   }
 
   #name_and_role {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
+
 
 
     #name {
       margin-bottom: 2.5rem;
       width: fit-content;
       font-size: 4rem;
-      padding-right: 10rem;
 
       &::after {
         content: "";
@@ -55,7 +51,7 @@
     }
 
     #role {
-      padding-left: 6rem;
+      float: right;
       font-size: 2.5rem;
       width: fit-content;
 

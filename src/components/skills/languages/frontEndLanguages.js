@@ -1,6 +1,6 @@
 import html5 from '../../../assets/icons/png/html5.png';
 import css3 from '../../../assets/icons/png/css3.png';
-import javascript from '../../../assets/icons/png/javascript.png';
+import javascript from '../../../assets/icons/svg/javascript.svg';
 import react from '../../../assets/icons/png/react.png';
 import sass from '../../../assets/icons/png/sass.png';
 import bootstrap from '../../../assets/icons/svg/bootstrap.svg';

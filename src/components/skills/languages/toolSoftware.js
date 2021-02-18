@@ -13,11 +13,11 @@ function fillToolSoftware(obj){
             Github: github,
             Git: git,
             npm: npm,
-            Figma: figma
+            Figma: figma,
+            Jira: jira
         },
         past: {
             Photoshop: photoshop,
-            Jira: jira,
             Gitlab: gitlab
         }
     }

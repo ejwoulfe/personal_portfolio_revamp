@@ -43,27 +43,26 @@
             font-size: 1.3rem;
         }
 
-        .weekly_usage,
+
+        .weekly_usage {
+            @include tech-usage-container;
+
+        }
+
         .past_usage {
-            margin: 0 auto;
-            width: 70%;
+            @include tech-usage-container;
             height: 8rem;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            padding-bottom: 4rem;
+            padding-bottom: 1rem;
         }
 
 
         .technology {
-            flex-grow: 1;
-            flex-shrink: 1;
+            flex: 1 1 32%;
             display: flex;
             flex-wrap: nowrap;
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
-            text-align: center;
 
             img {
                 @include tech-icon;
@@ -75,6 +74,7 @@
 
         }
     }
+
 
 
     &:nth-child(even) .under_space {

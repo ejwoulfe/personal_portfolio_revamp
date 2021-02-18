@@ -18,6 +18,17 @@ $regular: 400;
 $semi-bold: 600;
 $bold: 700;
 
+// Technology Cards Mixins
+@mixin tech-usage-container {
+    margin: 0 auto;
+    display: flex;
+    height: 16rem;
+    width: 65%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
 // Technology Mixins
 @mixin tech-icon {
     width: 4rem;

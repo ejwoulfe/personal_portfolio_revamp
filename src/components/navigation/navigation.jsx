@@ -5,6 +5,7 @@ import resume from '../../assets/icons/svg/resume.svg';
 
 function Navigation() {
 
+
     function goToGithub() {
         window.open("https://github.com/ejwoulfe");
     }
