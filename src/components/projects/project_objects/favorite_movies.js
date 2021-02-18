@@ -1,10 +1,10 @@
-import html5 from '../../../assets/icons/html5.svg';
-import css3 from '../../../assets/icons/css3.svg';
-import javascript from '../../../assets/icons/javascript.svg';
-import react from '../../../assets/icons/react.svg';
-import sass from '../../../assets/icons/sass.svg';
-import node from '../../../assets/icons/node.svg';
-import mongodb from '../../../assets/icons/mongodb.svg';
+import html5 from '../../../assets/icons/png/html5.png';
+import css3 from '../../../assets/icons/png/css3.png';
+import javascript from '../../../assets/icons/png/javascript.png';
+import react from '../../../assets/icons/png/react.png';
+import sass from '../../../assets/icons/png/sass.png';
+import node from '../../../assets/icons/png/node.png';
+import mongodb from '../../../assets/icons/png/mongodb.png';
 import projectImage from '../../../assets/project_images/favorite-movies.png';
 
 function createFavoriteMoviesObject(object){

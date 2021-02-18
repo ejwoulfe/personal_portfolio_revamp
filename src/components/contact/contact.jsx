@@ -1,7 +1,7 @@
 import React from 'react';
 import './contact.scss';
 import ContactForm from './contact_form/contact_form';
-import arrowUp from '../../assets/icons/arrow-up.svg';
+import arrowUp from '../../assets/icons/svg/arrow-up.svg';
 
 function Contact() {
 

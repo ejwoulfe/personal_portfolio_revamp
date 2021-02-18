@@ -1,10 +1,10 @@
-import html5 from '../../../assets/icons/html5.svg';
-import css3 from '../../../assets/icons/css3.svg';
-import javascript from '../../../assets/icons/javascript.svg';
-import bootstrap from '../../../assets/icons/bootstrap.svg';
-import php from '../../../assets/icons/php.svg';
-import mysql from '../../../assets/icons/mysql.svg';
-import jquery from '../../../assets/icons/jquery.svg';
+import html5 from '../../../assets/icons/png/html5.png';
+import css3 from '../../../assets/icons/png/css3.png';
+import javascript from '../../../assets/icons/png/javascript.png';
+import bootstrap from '../../../assets/icons/png/bootstrap.png';
+import php from '../../../assets/icons/png/php.png';
+import mysql from '../../../assets/icons/png/mysql.png';
+import jquery from '../../../assets/icons/png/jquery.png';
 import projectImage from '../../../assets/project_images/bdoprofit.png';
 
 function createBDOProfitObject(object){

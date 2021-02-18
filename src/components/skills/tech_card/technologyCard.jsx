@@ -26,6 +26,8 @@ function TechnologyCard(props) {
     return (
 
         <div className="tech_card">
+            <div className="over_space"></div>
+
             <h3 className="card_title">{props.type}</h3>
             <div className="tech_stack">
                 <h4 className="weekly_title">Daily/Weekly Usage</h4>
@@ -41,6 +43,7 @@ function TechnologyCard(props) {
                     {createTechIcon(props.past)}
                 </div>
             </div>
+            <div className="under_space"></div>
 
         </div>
 

@@ -1,7 +1,7 @@
-import node from '../../../assets/icons/node.svg';
-import php from '../../../assets/icons/php.svg';
-import mysql from '../../../assets/icons/mysql.svg';
-import mongodb from '../../../assets/icons/mongodb.svg';
+import node from '../../../assets/icons/png/node.png';
+import php from '../../../assets/icons/png/php.png';
+import mysql from '../../../assets/icons/png/mysql.png';
+import mongodb from '../../../assets/icons/png/mongodb.png';
 
 function fillBackEndLanguages(obj){
     obj = {

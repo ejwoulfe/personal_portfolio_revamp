@@ -9,11 +9,43 @@
     z-index: 1;
     max-width: $max-width-large;
     margin: auto;
-    display: flex;
-    justify-content: flex-end;
+    display: inline;
+    border-bottom: 1px solid $red-pink;
+
+    #icons {
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100%;
+        width: 15rem;
+        float: left;
+        justify-content: space-around;
+        align-items: center;
+
+        #logo {
+            border-right: solid 3px $red-pink;
+
+            h1 {
+                margin: 0;
+                font-family: $title-font;
+                padding-right: 1rem;
+                font-weight: $regular;
+            }
+        }
+
+        #resume_icon {
+            height: 2rem;
+            width: 1.5rem;
+        }
+
+        #github_icon {
+            height: 2rem;
+            width: 2rem;
+        }
+    }
 
 
     #nav_list {
+        float: right;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -25,7 +57,7 @@
         width: 25rem;
         list-style-type: none;
         font-family: $title-font;
-        font-weight: $bold;
+        font-weight: $regular;
         font-size: 1.7rem;
 
 

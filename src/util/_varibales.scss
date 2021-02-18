@@ -1,8 +1,12 @@
 // Screen Width
 $max-width-large: 1920px;
 
+// Colors
+$red-pink: #D73953;
+$light-black: #252525;
+
 // Font Family
-$title-font:'Dosis',
+$title-font:'Staatliches',
 sans-serif;
 $sub-title-font: 'Red Rose',
 cursive;
@@ -16,14 +20,12 @@ $bold: 700;
 
 // Technology Mixins
 @mixin tech-icon {
-    width: 100%;
-    height: 5rem;
-    // filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, .2));
+    width: 4rem;
 }
 
 @mixin tech-name {
-    font-family: $title-font;
-    font-weight: $semi-bold;
+    font-family: $sub-title-font;
+    font-weight: $regular;
     font-size: 1.2rem;
     margin-top: 0rem;
 }
@@ -60,4 +62,22 @@ $bold: 700;
     &:after {
         margin: 0 0 0 20px;
     }
+}
+
+@mixin under_lines {
+    border-left: solid 2px $red-pink;
+    border-right: solid 2px $red-pink;
+    border-bottom: solid 2px $red-pink;
+    height: 2rem;
+    margin-top: 1rem;
+
+}
+
+@mixin over_lines {
+    border-left: solid 2px $red-pink;
+    border-right: solid 2px $red-pink;
+    border-top: solid 2px $red-pink;
+    height: 2rem;
+    margin-bottom: -1rem;
+
 }

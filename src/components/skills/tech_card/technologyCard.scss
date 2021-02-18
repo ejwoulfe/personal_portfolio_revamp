@@ -5,27 +5,33 @@
 
     .card_title {
         font-family: $title-font;
-        font-weight: $bold;
+        font-weight: $regular;
+        color: white;
         font-size: 3rem;
         margin-bottom: 0;
+        padding-left: .2rem;
+        text-decoration: underline $red-pink;
+        padding-bottom: .2rem;
+
     }
 
 
     .tech_stack {
-        background-color: white;
+        background-color: $light-black;
         min-width: 35rem;
         box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.25);
         border-radius: 10px;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+        color: white;
 
         .weekly_title {
             padding-top: 0.5rem;
             padding-left: 2rem;
             text-align: left;
             font-family: $title-font;
-            font-weight: $bold;
+            font-weight: $regular;
             font-size: 1.3rem;
         }
 
@@ -33,7 +39,7 @@
             padding-left: 2rem;
             text-align: left;
             font-family: $title-font;
-            font-weight: $bold;
+            font-weight: $regular;
             font-size: 1.3rem;
         }
 
@@ -41,17 +47,23 @@
         .past_usage {
             margin: 0 auto;
             width: 70%;
-            height: 50%;
+            height: 8rem;
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             flex-direction: row;
-            padding-bottom: 2rem;
+            padding-bottom: 4rem;
         }
 
 
         .technology {
-            height: 8.5rem;
-            flex: 20% 1;
+            flex-grow: 1;
+            flex-shrink: 1;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
 
             img {
                 @include tech-icon;
@@ -63,6 +75,24 @@
 
         }
     }
+
+
+    &:nth-child(even) .under_space {
+        visibility: hidden;
+    }
+
+    &:nth-child(odd) .over_space {
+        visibility: hidden;
+    }
+}
+
+.under_space {
+    @include under_lines;
+
+}
+
+.over_space {
+    @include over_lines;
 }
 
 @media (max-width: 600px) {

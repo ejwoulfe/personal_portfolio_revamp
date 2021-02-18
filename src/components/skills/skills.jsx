@@ -22,7 +22,6 @@ function Skills() {
 
     return (
         <div id="skills">
-            <div className="header"> <h1 className="header_text">Skills</h1></div>
             <div id="cards">
                 <TechnologyCard {...frontEndLanguages} />
                 <TechnologyCard {...backEndLanguages} />

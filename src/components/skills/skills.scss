@@ -2,19 +2,8 @@
 
 #skills {
     max-width: $max-width-large;
-    background-color: #F8F8F8;
-    margin-top: 8rem;
-    text-align: center;
+    background-color: #000000;
 
-
-
-    .header {
-        @include header_style;
-
-        .header_text {
-            @include title_text;
-        }
-    }
 
     #cards {
         display: flex;

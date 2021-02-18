@@ -1,8 +1,8 @@
 import React from 'react';
 import './right_panel.scss';
-import code from '../../../assets/icons/code.svg';
-import internet from '../../../assets/icons/internet.svg';
-import wrench from '../../../assets/icons/wrench.svg';
+import code from '../../../assets/icons/svg/code.svg';
+import internet from '../../../assets/icons/svg/internet.svg';
+import wrench from '../../../assets/icons/svg/wrench.svg';
 
 function RightPanel(props) {
 
