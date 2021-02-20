@@ -1,10 +1,10 @@
 import React from 'react';
-import './right_panel.scss';
+import './description_panel.scss';
 import code from '../../../assets/icons/svg/code.svg';
 import internet from '../../../assets/icons/svg/internet.svg';
 import wrench from '../../../assets/icons/svg/wrench.svg';
 
-function RightPanel(props) {
+function DescriptionPanel(props) {
 
 
     function arrayIntoListFormat(array) {
@@ -46,8 +46,9 @@ function RightPanel(props) {
     }
 
     return (
-        <div className="right_panel">
+        <div className="description_panel">
             <div className="description">
+                <div id="border_left"></div>
                 <h3>Description</h3>
                 <p>{props.description}</p>
             </div>
@@ -60,8 +61,10 @@ function RightPanel(props) {
             <div className="accomplishments">
                 <h3>Accomplishments</h3>
                 {arrayIntoListFormat(props.accomplishments)}
+                <div id="border_right"></div>
 
             </div>
+            
             {/* <div className="links">
                 <span onClick={() => goToUrl(props.githubURL)}>
                     <img src={code} alt="link to github repository"></img>
@@ -72,4 +75,4 @@ function RightPanel(props) {
         </div>
     )
 }
-export default RightPanel;
+export default DescriptionPanel;

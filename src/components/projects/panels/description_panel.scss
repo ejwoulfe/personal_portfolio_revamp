@@ -1,0 +1,104 @@
+@import "../../../util/varibales";
+
+@mixin text-area-style {
+  max-width: 72%;
+  margin: 0 auto;
+  font-family: $description-font;
+  font-weight: $regular;
+  font-size: 1.2rem;
+}
+.description_panel {
+  text-align: left;
+
+  .description {
+    padding: 2rem 0rem 1rem 2rem;
+    @include text-area-style;
+    border-top: solid 1px $red-pink;
+    position: relative;
+    #border_left {
+      border-right: solid 1px $red-pink;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 90%;
+    }
+  }
+
+  .goals {
+    padding: 2rem 0rem 1.5rem 0rem;
+    @include text-area-style;
+  }
+  .accomplishments {
+    padding: 2rem 2rem 1.5rem 0rem;
+    @include text-area-style;
+    border-bottom: solid 1px $red-pink;
+    position: relative;
+
+    #border_right {
+      border-right: solid 1px $red-pink;
+      position: absolute;
+      top: 90%;
+      bottom: 0;
+      right: 0;
+    }
+
+    .list_item {
+      padding: 0.2rem 0rem 0.2rem 0rem;
+      list-style: none;
+
+      &::before {
+        content: "\25AA";
+        color: $red-pink;
+        display: inline-block;
+        width: 1rem;
+        margin-left: -1rem;
+      }
+    }
+  }
+
+  h3 {
+    font-family: $sub-title-font;
+    font-weight: $regular;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .links {
+    padding: 2rem 0rem 1.5rem 0rem;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    span:hover {
+      cursor: pointer;
+    }
+
+    img {
+      width: 5rem;
+      height: 5rem;
+      margin: 0rem 2rem 0rem 2rem;
+      padding: 0.5rem;
+    }
+
+    h4 {
+      margin: 0;
+      font-family: $description-font;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .project_info .description {
+    .description,
+    .goals,
+    .accomplishments {
+      max-width: 90%;
+    }
+  }
+}

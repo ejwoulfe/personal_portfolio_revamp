@@ -1,102 +1,93 @@
-@import '../../../util/varibales';
+@import "../../../util/varibales";
 
 .tech_card {
-    flex: 32% 0 0;
+  flex: 32% 0 0;
 
-    .card_title {
-        font-family: $title-font;
-        font-weight: $regular;
-        color: white;
-        font-size: 3rem;
-        margin-bottom: 0;
-        padding-left: .2rem;
-        text-decoration: underline $red-pink;
-        padding-bottom: .2rem;
+  .card_title {
+    font-family: $title-font;
+    font-weight: $regular;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 0;
+    padding-left: 0.2rem;
+    text-decoration: underline $red-pink;
+    padding-bottom: 0.2rem;
+  }
 
+  .tech_stack {
+    background-color: $light-black;
+    min-width: 35rem;
+    box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color: white;
+
+    .weekly_title {
+      padding-top: 0.5rem;
+      padding-left: 2rem;
+      text-align: left;
+      font-family: $title-font;
+      font-weight: $regular;
+      font-size: 1.3rem;
     }
 
-
-    .tech_stack {
-        background-color: $light-black;
-        min-width: 35rem;
-        box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        color: white;
-
-        .weekly_title {
-            padding-top: 0.5rem;
-            padding-left: 2rem;
-            text-align: left;
-            font-family: $title-font;
-            font-weight: $regular;
-            font-size: 1.3rem;
-        }
-
-        .past_title {
-            padding-left: 2rem;
-            text-align: left;
-            font-family: $title-font;
-            font-weight: $regular;
-            font-size: 1.3rem;
-        }
-
-
-        .weekly_usage {
-            @include tech-usage-container;
-
-        }
-
-        .past_usage {
-            @include tech-usage-container;
-            height: 8rem;
-            padding-bottom: 1rem;
-        }
-
-
-        .technology {
-            flex: 1 1 32%;
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-
-            img {
-                @include tech-icon;
-            }
-
-            h5 {
-                @include tech-name;
-            }
-
-        }
+    .past_title {
+      padding-left: 2rem;
+      text-align: left;
+      font-family: $title-font;
+      font-weight: $regular;
+      font-size: 1.3rem;
     }
 
-
-
-    &:nth-child(even) .under_space {
-        visibility: hidden;
+    .weekly_usage {
+      @include tech-usage-container;
     }
 
-    &:nth-child(odd) .over_space {
-        visibility: hidden;
+    .past_usage {
+      @include tech-usage-container;
+      height: 8rem;
+      padding-bottom: 1rem;
     }
+
+    .technology {
+      flex: 0 0 32%;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+
+      img {
+        @include tech-icon-skills;
+      }
+
+      h5 {
+        @include tech-name;
+      }
+    }
+  }
+
+  &:nth-child(even) .under_space {
+    visibility: hidden;
+  }
+
+  &:nth-child(odd) .over_space {
+    visibility: hidden;
+  }
 }
 
 .under_space {
-    @include under_lines;
-
+  @include under_lines;
 }
 
 .over_space {
-    @include over_lines;
+  @include over_lines;
 }
 
 @media (max-width: 600px) {
-    .tech_card .tech_stack {
-        min-width: 30rem;
-    }
+  .tech_card .tech_stack {
+    min-width: 30rem;
+  }
 }

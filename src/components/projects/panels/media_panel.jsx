@@ -1,7 +1,7 @@
 import React from 'react';
-import './left_panel.scss';
+import './media_panel.scss';
 
-function LeftPanel(props) {
+function MediaPanel(props) {
 
 
     function createTechIcons(techStack) {
@@ -25,16 +25,20 @@ function LeftPanel(props) {
     }
 
     return (
-        <div className="left_panel">
+        <div className="media_panel">
             <h1 className="project_name">{props.name}</h1>
             <img className="project_image" src={props.image} alt={props.name}></img>
             <h3 className="tech_title">Technologies Used</h3>
             <div className="project_tech">
+                <div id="border_top_left"></div>
+                <div id="border_top_right"></div>
 
                 {createTechIcons(props.techStack)}
+                <div id="border_bottom_left"></div>
+                <div id="border_bottom_right"></div>
 
             </div>
         </div>
     )
 }
-export default LeftPanel;
+export default MediaPanel;

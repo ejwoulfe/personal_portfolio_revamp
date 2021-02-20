@@ -2,16 +2,13 @@
 $max-width-large: 1920px;
 
 // Colors
-$red-pink: #D73953;
+$red-pink: #d73953;
 $light-black: #252525;
 
 // Font Family
-$title-font:'Staatliches',
-sans-serif;
-$sub-title-font: 'Red Rose',
-cursive;
-$description-font: 'Roboto',
-sans-serif;
+$title-font: "Staatliches", sans-serif;
+$sub-title-font: "Red Rose", cursive;
+$description-font: "Roboto", sans-serif;
 
 // Font Weight
 $regular: 400;
@@ -20,75 +17,75 @@ $bold: 700;
 
 // Technology Cards Mixins
 @mixin tech-usage-container {
-    margin: 0 auto;
-    display: flex;
-    height: 16rem;
-    width: 65%;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
+  margin: 0 auto;
+  display: flex;
+  height: 16rem;
+  width: 65%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 // Technology Mixins
-@mixin tech-icon {
-    width: 4rem;
+@mixin tech-icon-projects {
+  width: 3rem;
+}
+@mixin tech-icon-skills {
+  width: 4rem;
 }
 
 @mixin tech-name {
-    font-family: $sub-title-font;
-    font-weight: $regular;
-    font-size: 1.2rem;
-    margin-top: 0rem;
+  font-family: $sub-title-font;
+  font-weight: $regular;
+  font-size: 1.2rem;
+  margin-top: 0rem;
 }
 
 // Header Mixins
 @mixin header_style {
-
-    max-width: 98%;
-    margin: auto;
+  max-width: 98%;
+  margin: auto;
 }
 
 @mixin title_text {
-    padding-top: 3rem;
-    font-family: $sub-title-font;
-    font-weight: $regular;
-    font-size: 2rem;
-    margin-top: 0rem;
+  padding-top: 3rem;
+  font-family: $sub-title-font;
+  font-weight: $regular;
+  font-size: 3rem;
+  margin-top: 0rem;
 
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
+  &:before,
+  &:after {
+    content: "";
+    border-top: 1px solid $red-pink;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+  }
 
-    &:before,
-    &:after {
-        content: '';
-        border-top: 1px solid #838383;
-        margin: 0 20px 0 0;
-        flex: 1 0 20px;
-    }
-
-    &:after {
-        margin: 0 0 0 20px;
-    }
+  &:after {
+    margin: 0 0 0 20px;
+  }
 }
 
 @mixin under_lines {
-    border-left: solid 2px $red-pink;
-    border-right: solid 2px $red-pink;
-    border-bottom: solid 2px $red-pink;
-    height: 2rem;
-    margin-top: 1rem;
-
+  border-left: solid 2px $red-pink;
+  border-right: solid 2px $red-pink;
+  border-bottom: solid 2px $red-pink;
+  height: 2rem;
+  margin-top: 1rem;
 }
 
 @mixin over_lines {
-    border-left: solid 2px $red-pink;
-    border-right: solid 2px $red-pink;
-    border-top: solid 2px $red-pink;
-    height: 2rem;
-    margin-bottom: -1rem;
-
+  border-left: solid 2px $red-pink;
+  border-right: solid 2px $red-pink;
+  border-top: solid 2px $red-pink;
+  height: 2rem;
+  margin-bottom: -1rem;
 }

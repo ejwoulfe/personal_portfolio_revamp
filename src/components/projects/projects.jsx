@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import LeftPanel from './panels/left_panel';
-import RightPanel from './panels/right_panel';
+import MediaPanel from './panels/media_panel';
+import DescriptionPanel from './panels/description_panel';
 import './projects.scss';
 import createFavMoviesObject from './project_objects/favorite_movies';
 import createLolChampionsObject from './project_objects/lol_champions';
@@ -40,8 +40,8 @@ function Projects() {
         return projectsArr.map((value, index) => (
 
             <div key={"project_" + index + 1} className="project_info" >
-                <LeftPanel {...value} />
-                <RightPanel {...value} />
+                <MediaPanel {...value} />
+                <DescriptionPanel {...value} />
             </div>
 
         ))

@@ -1,45 +1,44 @@
-@import '../../util/varibales';
+@import "../../util/varibales";
 
 #projects {
-    max-width: $max-width-large;
-    background-color: #EAEAEA;
-    text-align: center;
+  max-width: $max-width-large;
+  background-color: $light-black;
+  text-align: center;
+  color: white;
 
+  .header {
+    @include header_style;
 
-    .header {
-        @include header_style;
+    .header_text {
+      @include title_text;
+    }
+  }
 
-        .header_text {
-            @include title_text;
-        }
+  .project_info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 4rem;
+    padding-top: 5rem;
+    box-shadow: 0rem 4px 6px -5px #000000;
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
     }
 
-    .project_info {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-around;
-        padding-bottom: 4rem;
-        padding-top: 5rem;
-        box-shadow: 0rem 4px 6px -5px #000000;
-
-        &:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
-
-        .left_panel,
-        .right_panel {
-            flex-basis: 40rem;
-            flex-shrink: 1;
-            flex-grow: 1;
-
-        }
+    .media_panel,
+    .description_panel {
+      flex-basis: 40rem;
+      flex-shrink: 1;
+      flex-grow: 1;
     }
+  }
 }
 
 @media (max-width: 810px) {
-    .left_panel {
-        padding-bottom: 3rem;
-    }
+  .media_panel {
+    padding-bottom: 3rem;
+  }
 }
