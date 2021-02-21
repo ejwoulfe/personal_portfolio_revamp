@@ -1,10 +1,11 @@
+@import "../../util/mixins";
 @import "../../util/varibales";
 
 #projects {
   max-width: $max-width-large;
-  background-color: $light-black;
   text-align: center;
   color: white;
+  background-color: $light-black;
 
   .header {
     @include header_style;
@@ -23,9 +24,14 @@
     padding-bottom: 4rem;
     padding-top: 5rem;
     box-shadow: 0rem 4px 6px -5px #000000;
+    background-color: $light-black;
 
     &:nth-child(odd) {
       flex-direction: row-reverse;
+      background-color: $dark-black;
+      .project_image {
+        box-shadow: -12px 12px 0 $red-pink;
+      }
     }
 
     .media_panel,

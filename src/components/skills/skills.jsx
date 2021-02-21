@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import fillFrontEndLanguages from './languages/frontEndLanguages';
 import fillBackEndLanguages from './languages/backEndLanguages';
 import fillToolSoftware from './languages/toolSoftware';
-import TechnologyCard from './tech_card/technologyCard.jsx';
+import Card from './card/card.jsx';
 import './skills.scss';
 
 function Skills() {
@@ -23,9 +23,9 @@ function Skills() {
     return (
         <div id="skills">
             <div id="cards">
-                <TechnologyCard {...frontEndLanguages} />
-                <TechnologyCard {...backEndLanguages} />
-                <TechnologyCard {...toolSoftware} />
+                <Card {...frontEndLanguages} />
+                <Card {...backEndLanguages} />
+                <Card {...toolSoftware} />
             </div>
 
         </div>

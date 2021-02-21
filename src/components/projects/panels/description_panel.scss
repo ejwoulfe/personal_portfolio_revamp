@@ -41,18 +41,17 @@
       bottom: 0;
       right: 0;
     }
+  }
+  .list_item {
+    padding: 0.2rem 0rem 0.2rem 0rem;
+    list-style: none;
 
-    .list_item {
-      padding: 0.2rem 0rem 0.2rem 0rem;
-      list-style: none;
-
-      &::before {
-        content: "\25AA";
-        color: $red-pink;
-        display: inline-block;
-        width: 1rem;
-        margin-left: -1rem;
-      }
+    &::before {
+      content: "\25AA";
+      color: $red-pink;
+      display: inline-block;
+      width: 1rem;
+      margin-left: -1rem;
     }
   }
 

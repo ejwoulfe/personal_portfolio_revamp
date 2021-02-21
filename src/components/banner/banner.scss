@@ -5,16 +5,17 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-
 }
 
 #left_shape {
-  height: 60rem;
+  height: 60%;
+  width: 60%;
   margin-top: 5rem;
 }
 
 #right_shape {
-  height: 60rem;
+  height: 60%;
+  width: 60%;
   margin-bottom: 15rem;
 }
 
@@ -32,9 +33,6 @@
   }
 
   #name_and_role {
-
-
-
     #name {
       margin-bottom: 2.5rem;
       width: fit-content;
@@ -46,7 +44,6 @@
         margin: 0 auto;
         width: 70%;
         border-bottom: 4px solid $red-pink;
-
       }
     }
 
@@ -61,12 +58,10 @@
         margin: 0 auto;
         width: 70%;
         border-bottom: 4px solid $red-pink;
-
       }
     }
   }
 }
-
 
 @media (max-width: 1450px) {
   #personal_info {

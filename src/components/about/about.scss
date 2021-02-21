@@ -1,83 +1,91 @@
-@import '../../util/varibales';
+@import "../../util/varibales";
+@import "../../util/mixins";
 
 #about {
-    max-width: $max-width-large;
-    background-color: #F8F8F8;
-    text-align: center;
+  max-width: $max-width-large;
+  background-color: $dark-black;
+  text-align: center;
+  color: white;
 
+  .header {
+    @include header_style;
 
-    .header {
-        @include header_style;
+    .header_text {
+      @include title_text;
+    }
+  }
 
-        .header_text {
-            @include title_text;
-        }
+  #about_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    #image_carousel,
+    #about_text_container {
+      flex: 1 0 45%;
     }
 
-    #about_container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        padding-bottom: 4rem;
-        padding-top: 2rem;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-
-        #image_carousel,
-        #about_text {
-            flex-basis: 40rem;
-            flex-shrink: 1;
-            flex-grow: 1;
-
-        }
-
-        #image_carousel img {
-            width: 80%;
-            height: 80%;
-            box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
-            object-fit: cover;
-        }
-
-        .carousel_button {
-            border: none;
-            border-radius: 3rem;
-            background-color: rgb(32, 32, 32);
-            padding: .5rem;
-            margin-right: .5rem;
-            text-align: center;
-            text-decoration: none;
-            outline: none;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-
-        .carousel_button_current {
-            border: none;
-            border-radius: 3rem;
-            background-color: rgb(129, 129, 129);
-            padding: .5rem;
-            margin-right: .5rem;
-            text-align: center;
-            text-decoration: none;
-            outline: none;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-
-        #about_text {
-            text-align: left;
-            font-family: $description-font;
-            font-weight: $semi-bold;
-            font-size: 1.2rem;
-            padding-top: 5rem;
-            max-width: 95%;
-
-        }
+    #image_carousel img {
+      width: 80%;
+      height: 80%;
+      box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      object-fit: cover;
     }
+
+    .carousel_button {
+      border: none;
+      border-radius: 3rem;
+      background-color: $red-pink;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .carousel_button_current {
+      border: none;
+      border-radius: 3rem;
+      background-color: white;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    #about_text_container {
+      text-align: left;
+      font-family: $description-font;
+      font-weight: $semi-bold;
+      font-size: 1.2rem;
+      padding-top: 5rem;
+      position: relative;
+
+      .about_text {
+        width: 80%;
+      }
+      #border_right {
+        position: absolute;
+        width: 82%;
+        height: 3rem;
+        border-bottom: solid 1px $red-pink;
+        border-right: solid 1px $red-pink;
+      }
+    }
+  }
 }

@@ -1,10 +1,11 @@
 @import "../../../util/varibales";
+@import "../../../util/mixins";
 
 .project_name {
   text-align: left;
   padding-left: 3rem;
   font-family: $title-font;
-  font-weight: $bold;
+  font-weight: $regular;
   font-size: 2.7rem;
   margin-bottom: 0.5rem;
 }
@@ -12,16 +13,15 @@
 .project_image {
   width: 90%;
   height: 50%;
-  box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
   object-fit: cover;
+  box-shadow: 12px 12px 0 $red-pink;
 }
 
 .tech_title {
   font-family: $title-font;
   text-align: left;
   padding-left: 10rem;
-  font-weight: $bold;
+  font-weight: $regular;
 }
 
 .project_tech {

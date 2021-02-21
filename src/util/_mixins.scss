@@ -1,0 +1,76 @@
+// Technology Cards Mixins
+@mixin tech-usage-container {
+  margin: 0 auto;
+  display: flex;
+  height: 16rem;
+  width: 65%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+// Technology Mixins
+@mixin tech-icon-projects {
+  width: 3rem;
+}
+@mixin tech-icon-skills {
+  width: 4rem;
+}
+
+@mixin tech-name {
+  font-family: $sub-title-font;
+  font-weight: $regular;
+  font-size: 1.2rem;
+  margin-top: 0rem;
+}
+
+// Header Mixins
+@mixin header_style {
+  max-width: 98%;
+  margin: auto;
+}
+
+@mixin title_text {
+  padding-top: 3rem;
+  color: white;
+  font-family: $sub-title-font;
+  font-weight: $regular;
+  font-size: 3rem;
+  margin: 0;
+  padding-bottom: 2rem;
+
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &:before,
+  &:after {
+    content: "";
+    border-top: 1px solid $red-pink;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+  }
+
+  &:after {
+    margin: 0 0 0 20px;
+  }
+}
+
+@mixin under_lines {
+  border-left: solid 2px $red-pink;
+  border-right: solid 2px $red-pink;
+  border-bottom: solid 2px $red-pink;
+  height: 2rem;
+  margin-top: 1rem;
+}
+
+@mixin over_lines {
+  border-left: solid 2px $red-pink;
+  border-right: solid 2px $red-pink;
+  border-top: solid 2px $red-pink;
+  height: 2rem;
+  margin-bottom: -1rem;
+}

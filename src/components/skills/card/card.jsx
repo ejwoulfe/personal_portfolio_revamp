@@ -1,7 +1,7 @@
 import React from 'react';
-import './technologyCard.scss';
+import './card.scss';
 
-function TechnologyCard(props) {
+function Card(props) {
 
     function createTechIcon(techStack) {
         if (techStack !== undefined) {
@@ -25,7 +25,7 @@ function TechnologyCard(props) {
 
     return (
 
-        <div className="tech_card">
+        <div className="card">
             <div className="over_space"></div>
 
             <h3 className="card_title">{props.type}</h3>
@@ -51,4 +51,4 @@ function TechnologyCard(props) {
     );
 }
 
-export default TechnologyCard;
+export default Card;
