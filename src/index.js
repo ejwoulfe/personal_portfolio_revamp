@@ -8,6 +8,7 @@ import Skills from './components/skills/skills';
 import Projects from './components/projects/projects';
 import About from './components/about/about';
 import Contact from './components/contact/contact';
+import ToTopButton from './components/toTopButton/to_top_button';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Projects></Projects>
       <About></About>
       <Contact></Contact>
+      <ToTopButton></ToTopButton>
     </div>
   </React.StrictMode>,
   document.getElementById('root')
