@@ -1,4 +1,5 @@
-@import "../../../util/varibales";
+@import '../../../util/varibales';
+@import '../../../util/mixins';
 
 @mixin text-area-style {
   max-width: 72%;
@@ -7,6 +8,7 @@
   font-weight: $regular;
   font-size: 1.2rem;
 }
+
 .description_panel {
   text-align: left;
 
@@ -15,33 +17,23 @@
     @include text-area-style;
     border-top: solid 1px $red-pink;
     position: relative;
-    #border_left {
-      border-right: solid 1px $red-pink;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 90%;
-    }
+    @include border_top_left;
+
   }
 
   .goals {
     padding: 2rem 0rem 1.5rem 0rem;
     @include text-area-style;
   }
+
   .accomplishments {
     padding: 2rem 2rem 1.5rem 0rem;
     @include text-area-style;
     border-bottom: solid 1px $red-pink;
     position: relative;
-
-    #border_right {
-      border-right: solid 1px $red-pink;
-      position: absolute;
-      top: 90%;
-      bottom: 0;
-      right: 0;
-    }
+    @include border_bottom_right;
   }
+
   .list_item {
     padding: 0.2rem 0rem 0.2rem 0rem;
     list-style: none;
@@ -69,31 +61,37 @@
     text-align: center;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
 
-    span:hover {
-      cursor: pointer;
+    span {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+      flex-basis: 33%;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     img {
-      width: 5rem;
-      height: 5rem;
-      margin: 0rem 2rem 0rem 2rem;
-      padding: 0.5rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      margin-right: 1rem;
     }
 
     h4 {
       margin: 0;
-      font-family: $description-font;
-      font-weight: bold;
-      font-size: 1.2rem;
+      font-family: $sub-title-font;
+      font-weight: $regular;
+      font-size: 1em;
     }
   }
 }
 
 @media (max-width: 1500px) {
   .project_info .description {
+
     .description,
     .goals,
     .accomplishments {

@@ -30,12 +30,13 @@ function MediaPanel(props) {
             <img className="project_image" src={props.image} alt={props.name}></img>
             <h3 className="tech_title">Technologies Used</h3>
             <div className="project_tech">
-                <div id="border_top_left"></div>
-                <div id="border_top_right"></div>
+                <div className="border_top_left"></div>
+                <div className="border_top_right"></div>
 
                 {createTechIcons(props.techStack)}
-                <div id="border_bottom_left"></div>
-                <div id="border_bottom_right"></div>
+
+                <div className="border_bottom_left"></div>
+                <div className="border_bottom_right"></div>
 
             </div>
         </div>

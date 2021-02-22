@@ -59,18 +59,45 @@
   }
 }
 
-@mixin under_lines {
-  border-left: solid 2px $red-pink;
-  border-right: solid 2px $red-pink;
-  border-bottom: solid 2px $red-pink;
-  height: 2rem;
-  margin-top: 1rem;
+// Border Mixins for Lines
+@mixin border_top_left {
+  .border_top_left {
+    border-left: solid 1px $red-pink;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 90%;
+  }
 }
 
-@mixin over_lines {
-  border-left: solid 2px $red-pink;
-  border-right: solid 2px $red-pink;
-  border-top: solid 2px $red-pink;
-  height: 2rem;
-  margin-bottom: -1rem;
+@mixin border_top_right {
+  .border_top_right {
+    position: absolute;
+    border-right: solid 1px $red-pink;
+    top: 0;
+    bottom: 90%;
+    right: 0;
+
+  }
+}
+
+@mixin border_bottom_right {
+  .border_bottom_right {
+    border-right: solid 1px $red-pink;
+    position: absolute;
+    top: 90%;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@mixin border_bottom_left {
+  .border_bottom_left {
+    position: absolute;
+    border-right: solid 1px $red-pink;
+    top: 90%;
+    bottom: 0;
+    left: 0;
+
+  }
 }

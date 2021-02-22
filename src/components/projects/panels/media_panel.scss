@@ -38,37 +38,10 @@
   border-top: solid 1px $red-pink;
   border-bottom: solid 1px $red-pink;
 
-  #border_top_left {
-    position: absolute;
-    border-left: solid 1px $red-pink;
-    top: 0;
-    bottom: 90%;
-    left: 0;
-  }
-
-  #border_top_right {
-    position: absolute;
-    border-right: solid 1px $red-pink;
-    top: 0;
-    bottom: 90%;
-    right: 0;
-  }
-
-  #border_bottom_left {
-    position: absolute;
-    border-right: solid 1px $red-pink;
-    top: 90%;
-    bottom: 0;
-    left: 0;
-  }
-
-  #border_bottom_right {
-    position: absolute;
-    border-right: solid 1px $red-pink;
-    top: 90%;
-    bottom: 0;
-    right: 0;
-  }
+  @include border_top_left;
+  @include border_top_right;
+  @include border_bottom_left;
+  @include border_bottom_right;
 
   .technology {
     justify-content: flex-end;

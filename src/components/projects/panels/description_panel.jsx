@@ -3,6 +3,7 @@ import './description_panel.scss';
 import code from '../../../assets/icons/svg/code.svg';
 import internet from '../../../assets/icons/svg/internet.svg';
 import wrench from '../../../assets/icons/svg/wrench.svg';
+import video from '../../../assets/icons/svg/video.svg';
 
 function DescriptionPanel(props) {
 
@@ -48,7 +49,7 @@ function DescriptionPanel(props) {
     return (
         <div className="description_panel">
             <div className="description">
-                <div id="border_left"></div>
+                <div className="border_top_left"></div>
                 <h3>Description</h3>
                 <p>{props.description}</p>
             </div>
@@ -60,18 +61,24 @@ function DescriptionPanel(props) {
 
             <div className="accomplishments">
                 <h3>Accomplishments</h3>
+
                 {arrayIntoListFormat(props.accomplishments)}
-                <div id="border_right"></div>
+
+                <div className="links">
+                    <span>
+                        <img src={video} alt="link to a demo of the project"></img>
+                        <h4>Demo</h4>
+                    </span>
+                    <span onClick={() => goToUrl(props.githubURL)}>
+                        <img src={code} alt="link to github repository"></img>
+                        <h4>Code</h4>
+                    </span>
+                    {createLiveWebsiteIcon(props.liveURL)}
+                </div>
+                <div className="border_bottom_right"></div>
 
             </div>
-            
-            {/* <div className="links">
-                <span onClick={() => goToUrl(props.githubURL)}>
-                    <img src={code} alt="link to github repository"></img>
-                    <h4>Code</h4>
-                </span>
-                {createLiveWebsiteIcon(props.liveURL)}
-            </div> */}
+
         </div>
     )
 }

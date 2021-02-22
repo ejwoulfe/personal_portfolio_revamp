@@ -84,11 +84,19 @@
 }
 
 .under_space {
-  @include under_lines;
+  border-left: solid 1px $red-pink;
+  border-right: solid 1px $red-pink;
+  border-bottom: solid 1px $red-pink;
+  height: 2rem;
+  margin-top: 1rem;
 }
 
 .over_space {
-  @include over_lines;
+  border-left: solid 1px $red-pink;
+  border-right: solid 1px $red-pink;
+  border-top: solid 1px $red-pink;
+  height: 2rem;
+  margin-bottom: -1rem;
 }
 
 @media (max-width: 600px) {
