@@ -1,9 +1,9 @@
 import html5 from '../../../assets/icons/png/html5.png';
 import css3 from '../../../assets/icons/png/css3.png';
 import javascript from '../../../assets/icons/svg/javascript.svg';
-import bootstrap from '../../../assets/icons/png/bootstrap.png';
-import php from '../../../assets/icons/png/php.png';
-import mysql from '../../../assets/icons/png/mysql.png';
+import bootstrap from '../../../assets/icons/svg/bootstrap.svg';
+import php from '../../../assets/icons/svg/php.svg';
+import mysql from '../../../assets/icons/svg/mysql.svg';
 import jquery from '../../../assets/icons/png/jquery.png';
 import projectImage from '../../../assets/project_images/bdoprofit.png';
 

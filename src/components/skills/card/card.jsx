@@ -11,7 +11,7 @@ function Card(props) {
 
                 jsxArray.push(
 
-                    <span key={name} className="technology">
+                    <span key={name} id={name} className="technology">
                         <img src={techIcon} alt={name}></img>
                         <h5>{name}</h5>
                     </span>

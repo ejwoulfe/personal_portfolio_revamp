@@ -68,6 +68,10 @@
         @include tech-name;
       }
     }
+
+    #Node {
+      justify-content: center;
+    }
   }
 
   &:nth-child(even) .under_space {

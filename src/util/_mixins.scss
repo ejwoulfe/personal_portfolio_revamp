@@ -6,7 +6,6 @@
   width: 65%;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -14,6 +13,7 @@
 @mixin tech-icon-projects {
   width: 3rem;
 }
+
 @mixin tech-icon-skills {
   width: 4rem;
 }
@@ -34,7 +34,7 @@
 @mixin title_text {
   padding-top: 3rem;
   color: white;
-  font-family: $sub-title-font;
+  font-family: $title-font;
   font-weight: $regular;
   font-size: 3rem;
   margin: 0;

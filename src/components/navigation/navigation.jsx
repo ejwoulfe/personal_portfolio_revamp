@@ -31,11 +31,9 @@ function Navigation() {
                 </span>
                 <span id="resume_icon">
                     <img src={resume} alt="pdf file of my resume"></img>
-                    {/* <h5>Resume</h5> */}
                 </span>
                 <span id="github_icon">
                     <img src={githubWhite} onClick={() => goToGithub()} alt="link to my github"></img>
-                    {/* <h5>Github</h5> */}
                 </span>
 
             </div>

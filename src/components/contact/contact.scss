@@ -4,6 +4,11 @@
 #contact {
   max-width: $max-width-large;
   text-align: center;
+  background: url('../../assets/contact-background.png');
+  background-size: cover;
+  background-position: 25% 25%;
+  background-repeat: no-repeat;
+  padding-bottom: 10rem;
 
   .header {
     @include header_style;
