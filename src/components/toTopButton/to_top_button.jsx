@@ -14,7 +14,7 @@ function ToTopButton() {
 
     function scrollFunction() {
         let topButton = document.getElementById("to_top_button");
-        if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+        if (document.body.scrollTop > 850 || document.documentElement.scrollTop > 850) {
             topButton.style.display = "block";
         } else {
             topButton.style.display = "none";
