@@ -20,18 +20,18 @@ function Navigation() {
     }, [])
 
     useEffect(() => {
+        // Variables for the navigation section links
         let navBar = document.getElementById('navigation');
         let navSkills = document.getElementById('nav_skills');
         let navProjects = document.getElementById('nav_projects');
         let navAbout = document.getElementById('nav_about');
         let navContact = document.getElementById('nav_contact');
+
+        // Variables for section containers
         let skillsContainer = document.getElementById('skills');
         let projectsContainer = document.getElementById('projects');
         let aboutContainer = document.getElementById('about');
         let contactContainer = document.getElementById('contact');
-        console.log("Current Position: " + yPosition)
-        console.log(contactContainer.offsetTop)
-
         if (yPosition > 30) {
             navBar.style.borderBottom = '1px solid #d73953';
         } else {
@@ -59,7 +59,7 @@ function Navigation() {
             navAbout.style.color = '#FFFFFF';
         }
 
-        // Underline about me section at y threshold.
+        // Underline contact section at y threshold.
         if (yPosition > contactContainer.offsetTop - 300 && yPosition <= document.body.scrollHeight) {
             navContact.style.color = '#d73953';
         } else {
@@ -72,6 +72,9 @@ function Navigation() {
 
     function openTabToGithub() {
         window.open("https://github.com/ejwoulfe");
+    }
+    function downloadResumePDF() {
+
     }
 
 

@@ -11,7 +11,7 @@
     @include header_style;
 
     .header_text {
-      @include title_text;
+      @include header_text;
     }
   }
 
@@ -29,6 +29,7 @@
     &:nth-child(odd) {
       flex-direction: row-reverse;
       background-color: $dark-black;
+
       .project_image {
         box-shadow: -12px 12px 0 $red-pink;
       }
