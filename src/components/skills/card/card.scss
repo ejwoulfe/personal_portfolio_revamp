@@ -8,7 +8,7 @@
     font-family: $title-font;
     font-weight: $regular;
     color: white;
-    font-size: 3rem;
+    font-size: $skills-font-size;
     margin-bottom: 0;
     padding-left: 0.2rem;
     text-decoration: underline $red-pink;
@@ -102,5 +102,19 @@
 @media (max-width: 600px) {
   .card .tech_stack {
     min-width: 30rem;
+  }
+}
+
+@media (max-width: 1119px) {
+  .card {
+    &:nth-child(even) {
+      .under_space {
+        visibility: visible;
+      }
+
+      .over_space {
+        visibility: hidden;
+      }
+    }
   }
 }

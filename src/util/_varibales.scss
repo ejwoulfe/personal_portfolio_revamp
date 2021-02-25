@@ -20,3 +20,7 @@ $semi-bold: 600;
 $bold: 700;
 
 // Font Size
+$navigation-font-size: clamp(28px, 2vw, 42px);
+$banner-font-size: clamp(28px, 3.2vw, 64px);
+$skills-font-size: clamp(42px, 2.8vw, 54px);
+$header-font-size: clamp(42px, 3.2vw, 64px);

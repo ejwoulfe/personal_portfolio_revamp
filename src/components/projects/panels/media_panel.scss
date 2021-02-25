@@ -6,13 +6,12 @@
   padding-left: 3rem;
   font-family: $sub-title-font;
   font-weight: $regular;
-  font-size: 2.7rem;
+  font-size: clamp(32px, 2vw, 38px);
   margin-bottom: 0.5rem;
 }
 
 .project_image {
-  width: 90%;
-  height: 50%;
+  width: 100%;
   object-fit: cover;
   box-shadow: 12px 12px 0 $red-pink;
 }
@@ -60,16 +59,17 @@
   }
 }
 
-@media (max-width: 1297px) {
-  .project_image {
-    width: 75%;
-    height: 50%;
-  }
-}
+
 
 @media (max-width: 660px) {
-  .project_image {
-    width: 95%;
-    height: 50%;
+
+  .project_info .project_name,
+  .project_info .tech_title {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .project_tech {
+    width: 75%;
   }
 }

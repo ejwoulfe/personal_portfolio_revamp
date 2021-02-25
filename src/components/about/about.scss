@@ -23,11 +23,11 @@
     padding-top: 2rem;
     justify-content: center;
     align-items: center;
-    height: 100%;
+
 
     #image_carousel,
     #about_text_container {
-      flex: 1 0 45%;
+      flex: 40rem 1 1;
     }
 
     #image_carousel img {
@@ -74,20 +74,20 @@
       font-weight: $regular;
       font-size: 1.2rem;
       padding-top: 5rem;
-      position: relative;
-
-
-      .about_text {
-        width: 80%;
-      }
+      margin: 0 5rem 0 5rem;
 
       #border_right {
-        position: absolute;
-        width: 82%;
+
         height: 3rem;
         border-bottom: solid 1px $red-pink;
         border-right: solid 1px $red-pink;
       }
     }
+  }
+}
+
+@media (max-width: 1439px) {
+  #about #about_container #about_text_container {
+    text-align: center;
   }
 }
