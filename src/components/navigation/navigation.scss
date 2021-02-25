@@ -7,6 +7,7 @@
     color: white;
     z-index: 1;
     max-width: $max-width-large;
+    min-width: $min-width;
     margin: auto;
     display: inline;
     position: fixed;
@@ -30,6 +31,11 @@
                 font-family: $title-font;
                 font-weight: $regular;
                 padding-right: 1rem;
+
+                &:hover {
+                    color: $red-pink;
+                    cursor: pointer;
+                }
             }
         }
 
@@ -40,6 +46,7 @@
 
             &:hover {
                 cursor: pointer;
+                filter: invert(39%) sepia(91%) saturate(3915%) hue-rotate(312deg) brightness(88%) contrast(90%);
             }
         }
 

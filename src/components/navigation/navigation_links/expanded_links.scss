@@ -15,12 +15,14 @@
     font-size: $navigation-font-size;
     padding-left: 1.8rem;
 
-    li {
-        padding-right: 2rem;
+    .nav_links {
+
+        margin-right: 2rem;
+
+        &:hover {
+            cursor: pointer;
+            border-bottom: solid 2px $red-pink;
+        }
     }
 
-}
-
-.nav_links:hover {
-    cursor: pointer;
 }

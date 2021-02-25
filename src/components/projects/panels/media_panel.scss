@@ -12,8 +12,10 @@
 
 .project_image {
   width: 100%;
+  min-width: $min-width;
   object-fit: cover;
   box-shadow: 12px 12px 0 $red-pink;
+  margin-bottom: 2rem;
 }
 
 .tech_title {

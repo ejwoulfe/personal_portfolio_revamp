@@ -17,7 +17,7 @@
 
   .tech_stack {
     background-color: $light-black;
-    min-width: 35rem;
+    min-width: $min-width;
     box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     display: flex;
@@ -99,11 +99,11 @@
   margin-bottom: -1rem;
 }
 
-@media (max-width: 600px) {
-  .card .tech_stack {
-    min-width: 30rem;
-  }
-}
+// @media (max-width: 600px) {
+//   .card .tech_stack {
+//     min-width: $min-width;
+//   }
+// }
 
 @media (max-width: 1119px) {
   .card {

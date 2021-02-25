@@ -1,5 +1,6 @@
 // Screen Width
 $max-width-large: 1920px;
+$min-width: 475px;
 
 // Colors
 $red-pink: #d73953;
@@ -20,7 +21,8 @@ $semi-bold: 600;
 $bold: 700;
 
 // Font Size
-$navigation-font-size: clamp(28px, 2vw, 42px);
+$navigation-font-size: clamp(28px, 1.8vw, 32px);
 $banner-font-size: clamp(28px, 3.2vw, 64px);
+$banner-role-font-size: clamp(24px, 2.8vw, 52px);
 $skills-font-size: clamp(42px, 2.8vw, 54px);
 $header-font-size: clamp(42px, 3.2vw, 64px);

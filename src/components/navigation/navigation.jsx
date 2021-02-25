@@ -47,7 +47,7 @@ function Navigation() {
         <div id="navigation">
             <div id="icons">
                 <span id="logo">
-                    <h1>EJW4</h1>
+                    <h1 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>EJW4</h1>
                 </span>
                 <span id="resume_icon">
                     <img src={resume} alt="pdf file of my resume"></img>
@@ -57,7 +57,7 @@ function Navigation() {
                 </span>
 
             </div>
-            {(windowWidth > 750) ? <CollapsedLinks></CollapsedLinks> : <ExpandedLinks></ExpandedLinks>}
+            {(windowWidth < 750) ? <CollapsedLinks></CollapsedLinks> : <ExpandedLinks></ExpandedLinks>}
         </div >
     )
 }
