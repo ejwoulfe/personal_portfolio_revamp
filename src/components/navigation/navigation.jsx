@@ -2,72 +2,37 @@ import React, { useEffect, useState } from 'react';
 import './navigation.scss';
 import githubWhite from '../../assets/icons/svg/github-white.svg';
 import resume from '../../assets/icons/svg/resume.svg';
+import CollapsedLinks from './navigation_links/collapsed_links';
+import ExpandedLinks from './navigation_links/expanded_links';
 
 function Navigation() {
-    const [yPosition, setYPosition] = useState(window.scrollY);
 
-    function handleYPosition() {
+    const [windowWidth, setWindowWith] = useState(window.innerWidth);
 
-        setYPosition(window.pageYOffset)
+
+    let handleResize = () => {
+
+        setWindowWith(window.innerWidth);
     }
 
     useEffect(() => {
 
-        window.addEventListener('scroll', handleYPosition)
+
+        window.addEventListener('resize', handleResize);
+
         return () => {
-            window.removeEventListener('scroll', handleYPosition);
+
+
+            window.removeEventListener('resize', handleResize);
         }
-    }, [])
+    }, []);
+
+
 
     useEffect(() => {
-        // Variables for the navigation section links
-        let navBar = document.getElementById('navigation');
-        let navSkills = document.getElementById('nav_skills');
-        let navProjects = document.getElementById('nav_projects');
-        let navAbout = document.getElementById('nav_about');
-        let navContact = document.getElementById('nav_contact');
+        setWindowWith(window.innerWidth);
 
-        // Variables for section containers
-        let skillsContainer = document.getElementById('skills');
-        let projectsContainer = document.getElementById('projects');
-        let aboutContainer = document.getElementById('about');
-        let contactContainer = document.getElementById('contact');
-        if (yPosition > 30) {
-            navBar.style.borderBottom = '1px solid #d73953';
-        } else {
-            navBar.style.borderBottom = 'none';
-        }
-
-        // Underline skills section at y threshold.
-        if (yPosition > skillsContainer.offsetTop - 101 && yPosition < projectsContainer.offsetTop - 101) {
-            navSkills.style.color = '#d73953';
-        } else {
-            navSkills.style.color = '#FFFFFF';
-        }
-
-        // Underline projects section at y threshold.
-        if (yPosition > projectsContainer.offsetTop - 101 && yPosition < aboutContainer.offsetTop - 101) {
-            navProjects.style.color = '#d73953';
-        } else {
-            navProjects.style.color = '#FFFFFF';
-        }
-
-        // Underline about me section at y threshold.
-        if (yPosition > aboutContainer.offsetTop - 101 && yPosition < contactContainer.offsetTop - 301) {
-            navAbout.style.color = '#d73953';
-        } else {
-            navAbout.style.color = '#FFFFFF';
-        }
-
-        // Underline contact section at y threshold.
-        if (yPosition > contactContainer.offsetTop - 300 && yPosition <= document.body.scrollHeight) {
-            navContact.style.color = '#d73953';
-        } else {
-            navContact.style.color = '#FFFFFF';
-        }
-
-
-    }, [yPosition])
+    }, [windowWidth]);
 
 
     function openTabToGithub() {
@@ -92,12 +57,7 @@ function Navigation() {
                 </span>
 
             </div>
-            <ul id="nav_list">
-                <li className="nav_links" id="nav_skills" onClick={() => window.scrollTo({ top: document.getElementById('skills').offsetTop - 100, left: 0, behavior: 'smooth' })} >Skills</li>
-                <li className="nav_links" id="nav_projects" onClick={() => window.scrollTo({ top: document.getElementById('projects').offsetTop - 100, left: 0, behavior: 'smooth' })} >Projects</li>
-                <li className="nav_links" id="nav_about" onClick={() => window.scrollTo({ top: document.getElementById('about').offsetTop - 100, left: 0, behavior: 'smooth' })}>About</li>
-                <li className="nav_links" id="nav_contact" onClick={() => window.scrollTo({ top: document.getElementById('contact').offsetTop, left: 0, behavior: 'smooth' })}>Contact</li>
-            </ul>
+            {(windowWidth < 700) ? <CollapsedLinks></CollapsedLinks> : <ExpandedLinks></ExpandedLinks>}
         </div >
     )
 }

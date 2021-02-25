@@ -1,0 +1,15 @@
+#bars_menu {
+    float: right;
+    height: 100%;
+    width: 2rem;
+    padding-right: 1rem;
+
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    #drop_down_menu {
+        visibility: hidden;
+    }
+}

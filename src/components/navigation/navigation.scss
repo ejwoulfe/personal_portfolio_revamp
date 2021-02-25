@@ -44,31 +44,4 @@
         }
 
     }
-
-
-    #nav_list {
-        float: right;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 0rem;
-        height: 100%;
-        list-style-type: none;
-        font-family: $title-font;
-        font-weight: $regular;
-        font-size: 1.7rem;
-
-        li {
-            padding-right: 3rem;
-        }
-
-    }
-
-    .nav_links:hover {
-        cursor: pointer;
-    }
-
-
 }
