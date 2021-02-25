@@ -57,7 +57,7 @@ function Navigation() {
                 </span>
 
             </div>
-            {(windowWidth < 750) ? <CollapsedLinks></CollapsedLinks> : <ExpandedLinks></ExpandedLinks>}
+            {(windowWidth > 750) ? <CollapsedLinks></CollapsedLinks> : <ExpandedLinks></ExpandedLinks>}
         </div >
     )
 }
