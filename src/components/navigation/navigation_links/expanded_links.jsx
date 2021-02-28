@@ -69,12 +69,23 @@ function ExpandedLinks() {
 
     }, [yPosition]);
 
+    
+    function goToSection(section){
+        if(section === 'contact'){
+
+        window.scrollTo({top: document.getElementById(section).offsetTop, left: 0, behavior: 'smooth'});
+        }else{
+
+        window.scrollTo({top: document.getElementById(section).offsetTop - 100, left: 0, behavior: 'smooth'});
+        }
+    }
+
     return (
         <ul id="nav_list">
-            <li className="nav_links" id="nav_skills" onClick={() => window.scrollTo({ top: document.getElementById('skills').offsetTop - 100, left: 0, behavior: 'smooth' })} >Skills</li>
-            <li className="nav_links" id="nav_projects" onClick={() => window.scrollTo({ top: document.getElementById('projects').offsetTop - 100, left: 0, behavior: 'smooth' })} >Projects</li>
-            <li className="nav_links" id="nav_about" onClick={() => window.scrollTo({ top: document.getElementById('about').offsetTop - 100, left: 0, behavior: 'smooth' })}>About</li>
-            <li className="nav_links" id="nav_contact" onClick={() => window.scrollTo({ top: document.getElementById('contact').offsetTop, left: 0, behavior: 'smooth' })}>Contact</li>
+            <li className="nav_links" id="nav_skills" onClick={() => goToSection('skills')} >Skills</li>
+            <li className="nav_links" id="nav_projects" onClick={() => goToSection('projects')} >Projects</li>
+            <li className="nav_links" id="nav_about" onClick={() => goToSection('about')}>About</li>
+            <li className="nav_links" id="nav_contact" onClick={() => goToSection('contact')}>Contact</li>
         </ul>
     );
 }
