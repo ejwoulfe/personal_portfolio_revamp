@@ -15,24 +15,31 @@
   position: absolute;
   top: 50px;
   right: 22px;
-  background-color: #00000060;
+  background-color: #00000095;
   list-style: none;
   text-align: left;
-  padding: 1rem 1rem 1rem 0;
+  padding: 1rem 1rem 0 0;
   border: solid 1px black;
-  width: 10rem;
+  width: 12rem;
 
   li {
     font-family: $title-font;
     font-size: $navigation-font-size;
     color: $red-pink;
     height: 2rem;
-    padding: 1rem 0 1rem 1rem;
-    border-bottom: solid 1px $red-pink;
+    padding: 1rem 1rem 1rem 0.2rem;
+    border-bottom: solid 1px white;
+    width: 100%;
 
     &:hover {
       cursor: pointer;
       color: white;
+    }
+
+    .drop_down_svg {
+      height: 2rem;
+      width: 2rem;
+      float: right;
     }
   }
 }

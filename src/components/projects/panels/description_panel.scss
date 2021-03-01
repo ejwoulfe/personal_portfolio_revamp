@@ -2,10 +2,10 @@
 @import '../../../util/mixins';
 
 @mixin text-area-style {
-  max-width: 72%;
-  margin: 0 auto;
   font-family: $description-font;
   font-weight: $regular;
+  max-width: 72%;
+  margin: 0 auto;
   font-size: 1.2rem;
 }
 
@@ -15,10 +15,11 @@
 
   .description {
     padding: 2rem 0rem 1rem 2rem;
-    @include text-area-style;
     border-top: solid 1px $red-pink;
     position: relative;
+
     @include border_top_left;
+    @include text-area-style;
 
   }
 
@@ -29,10 +30,12 @@
 
   .accomplishments {
     padding: 2rem 2rem 1.5rem 0rem;
-    @include text-area-style;
     border-bottom: solid 1px $red-pink;
     position: relative;
+
+    @include text-area-style;
     @include border_bottom_right;
+
   }
 
   .list_item {
@@ -54,7 +57,8 @@
     font-size: 1.4rem;
     display: flex;
     align-items: flex-end;
-    width: 100%;
+    width: fit-content;
+    border-bottom: solid 1px #FFFFFF;
   }
 
   .links {
@@ -78,14 +82,14 @@
     img {
       width: 3.5rem;
       height: 3.5rem;
-      margin-right: 1rem;
+      margin-right: .2rem;
     }
 
     h4 {
-      margin: 0;
       font-family: $sub-title-font;
       font-weight: $regular;
-      font-size: 1em;
+      margin: 0;
+      font-size: $desc-links-font-size;
     }
   }
 }
