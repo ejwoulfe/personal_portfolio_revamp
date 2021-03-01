@@ -38,20 +38,24 @@
 
   #send_button {
     width: 25rem;
-    height: 2rem;
     margin: auto;
     border: none;
-    background-color: $red-pink;
+    background-color: transparent;
     color: white;
-    font-family: $sub-title-font;
-    font-weight: $regular;
+    font-family: "Oxygen",
+      sans-serif;
+    font-weight: 400;
     font-size: 1.5rem;
     border-radius: 5px;
     transition: 0.2s all;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.247);
+    border: solid 3px $red-pink;
+    padding: 0.2rem;
+    box-shadow: 0px 2px 4px 0px #d7395355;
+
 
     &:hover {
       cursor: pointer;
+      background-color: $red-pink;
     }
 
     &:focus {

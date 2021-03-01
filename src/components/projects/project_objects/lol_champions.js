@@ -20,9 +20,9 @@ function createLolChampionsObject(object){
         },
         liveURL: "https://pensive-visvesvaraya-5f7d28.netlify.com/",
         githubURL: "https://github.com/ejwoulfe/lol-champions",
-        description: "Using the Riot Games public API, this website displays which champions are free for the current week, which champions are currently being played the most in the chosen ranked tier, and detailed information on all of the games playable champions.",
-        goals: ["Learn React.", "Learn how to fetch data from an API.", "Filter fetch requests.", "Use methods/strategies to keep the amount of request to a minimum.", "Learn about css preprocessors."],
-        accomplishments: ["Learned how to work with the React framework and create Single Page Applications.", "Utilized local and session storage to help with the limited fetch requests and optimize speed of the application.", "Worked with a public library of code to help create a nice carousel feature.", "Expanded tool set by implementing sass variables."]
+        description: ["LoL champions was made to help players of the game, League of Legends, find detailed information on all of its 154 playable champions.", "With this website a user can search for a specefic champion, browse a list of all of the champions, see which champions are being played the most in different ranked tiers, and see which ones are available to play free in the current week.", "*All information is obtained using the Riot Games Public API."],
+        goals: ["Learn React and how Single Page Applications work with the DOM.", "Learn how to fetch data from an API.", "Filter fetch requests.", "Use methods/strategies to keep the amount of request to a minimum.", "Learn about css preprocessors."],
+        accomplishments: ["Learned how to work with the React framework and created a Single Page Application.", "Utilized local and session storage to assist with limiting fetch requests and optimize speed of the application.", "Worked with a third party component to help create a nice carousel feature.", "Expanded tool set by implementing sass variables and sass bracket notation to my css files."]
 
     }
     return object;

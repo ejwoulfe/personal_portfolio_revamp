@@ -14,7 +14,7 @@
   margin-top: 3rem;
 
   .description {
-    padding: 2rem 0rem 1rem 2rem;
+    padding: 1rem 0rem 0rem 2rem;
     border-top: solid 1px $red-pink;
     position: relative;
 
@@ -24,12 +24,12 @@
   }
 
   .goals {
-    padding: 2rem 0rem 1.5rem 0rem;
+    padding: 1rem 0rem 0rem 0rem;
     @include text-area-style;
   }
 
   .accomplishments {
-    padding: 2rem 2rem 1.5rem 0rem;
+    padding: 1rem 2rem 0rem 0rem;
     border-bottom: solid 1px $red-pink;
     position: relative;
 

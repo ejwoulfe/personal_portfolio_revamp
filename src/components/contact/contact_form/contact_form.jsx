@@ -57,16 +57,19 @@ function ContactForm() {
         return true;
     }
 
-    // Disable send button on successful message sent.
+    // Disable send button and input fields on successful message sent.
     function disableButton() {
 
         document.getElementById('send_button').value = 'Sent!';
+        document.getElementById('send_button').style.border = 'none';
+        document.getElementById('send_button').style.boxShadow = 'none';
 
+        // Iterating through all the input fields.
         for (let i = 0; i < document.getElementsByTagName('input').length; i++) {
             document.getElementsByTagName('input')[i].disabled = true;
             document.getElementsByTagName('input')[i].style.backgroundColor = '#8888887c';
         }
-
+        // Disable the message text area.
         document.getElementsByTagName('textarea')[0].disabled = true;
         document.getElementsByTagName('textarea')[0].style.backgroundColor = '#8888887c';
     }

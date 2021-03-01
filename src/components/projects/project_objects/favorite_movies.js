@@ -22,9 +22,9 @@ function createFavoriteMoviesObject(object){
         },
         liveURL: "Work in progress.",
         githubURL: "https://github.com/ejwoulfe/favorite-movies",
-        description: "Favorite Movies is a full stack website which holds information on some popular movies and their featured actors. If a user finds a particular movie they really enjoyed, and they are logged in, they will be able to \"favorite\" them. Each user will have their favorite movies displayed on their account page.",
-        goals: ["Learn React Hooks", "Learn how non-relational databases interact with the front end.", "Understand the process of authentication.", "Create my own API.", "Create reusable/scalable components.", "Improve folder and component management skills."],
-        accomplishments: ["Create scalable and reusable components.", "Mades use of sass's mixins and variables.","Created a server with mongodb and express that connects my front end with my backend API.","Created more complex components with conditional rendering." ,"Held a consistant folder and component managment flow throughout the project. (Not having too many working parts in one component, seperated js objects to seperate folders/files.)."]
+        description: ["Favorite Movies allows a user to browse for their favorite movies or actors and gives them a brief description about that person/movie.", "The user will then be able to favorite a movie and have a collection of their favorites displayed on their account page."],
+        goals: ["Lean how React Hooks work and how they differ from classes.", "Learn how non-relational databases interact with the front end.", "Understand the process of authentication.", "Create my own API and Endpoints.", "Focus on reusable/scalable components.", "Improve folder and component management skills."],
+        accomplishments: ["Created several scalable and reusable components throughout the project.", "Made use of sass's mixins and variables.","Constructed a server with MongoDB and Express that connects my front end with my backend API.","Using conditional rendering, was able to implement several ways to display data on a page." ,"Held a consistent folder and component managment flow throughout the project for better readability and maintainability."]
 
     }
     return object;

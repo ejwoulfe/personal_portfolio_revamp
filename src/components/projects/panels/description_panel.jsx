@@ -20,6 +20,19 @@ function DescriptionPanel(props) {
         )
 
     }
+    function arrayIntoDescription(descriptionText) {
+        return (
+            <div>
+                {descriptionText.map((value) => {
+                    return (
+                        <p>{value}</p>
+                    )
+
+                })
+                }
+            </div>
+        );
+    }
 
     function goToUrl(url) {
 
@@ -51,7 +64,7 @@ function DescriptionPanel(props) {
             <div className="description">
                 <div className="border_top_left"></div>
                 <h3>Description</h3>
-                <p>{props.description}</p>
+                {arrayIntoDescription(props.description)}
             </div>
 
             <div className="goals">

@@ -22,11 +22,11 @@ function createBDOProfitObject(object){
         },
         liveURL: "https://bdoprofit.com",
         githubURL: "https://github.com/ejwoulfe/BDOProfit",
-        description: "Website to help players calculate if making an in-game craft will be profitable if they were to sell it on the marketplace.",
-        goals: ["Learn about relational databases.", "Create my own database.", "Research on how to collect a large amount of data around in-game items without access to a public API.", "Learn how the front and back end of an application work and come together.", "Create a full stack web application from scratch."],
-        accomplishments: ["Planned and created multiple tables with one-to-many and many-to-many relationships.",
+        description: ["BDOProfit is used to help players calculate if an in-game craft will be profitable to them if they were to sell it on the in-game marketplace.", "Once a player finds a recipe they want to craft, BDOProfit will display which materials, and their quantities, will be required in order to craft that recipe.", "The user will then enter in the values of each material and how much the recipe is currently going for on the marketplace.", "BDOProfit will then calculate the total costs of materials and the total profits they would make, including taxes, off the marketplace."],
+        goals: ["Create a relational database schema and implement it.", "Use web scrapping to collect a large amount of data around in-game items without access to a public API.", "Learn how the front and back end of an application work and come together to create a full stack web application.", "Learn a lot."],
+        accomplishments: ["Planned and implemented multiple tables with one-to-many and many-to-many relationships.",
         "Using Puppeteer, webscrapped thousands of item data. Formatted and exported that information to an sql database.",
-        "Successfully connected the database to the front end of my application.", "Created queries to search for a single item in the database and get related information to that item."]
+        "Successfully connected the database to the front end of my application.", "Created search queries which successfully retrieved item data in a heavily populated table."]
 
     }
     return object;
