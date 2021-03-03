@@ -1,7 +1,10 @@
 import React from 'react';
 import './media_panel.scss';
 
+
 function MediaPanel(props) {
+
+
 
 
     function createTechIcons(techStack) {
@@ -25,7 +28,9 @@ function MediaPanel(props) {
     }
 
     return (
+
         <div className="media_panel">
+
             <h1 className="project_name">{props.name}</h1>
             <img className="project_image" src={props.image} alt={props.name}></img>
             <h3 className="tech_title">Technologies Used</h3>
@@ -39,6 +44,7 @@ function MediaPanel(props) {
                 <div className="border_bottom_right"></div>
 
             </div>
+
         </div>
     )
 }

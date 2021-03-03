@@ -1,5 +1,6 @@
 @import '../../../util/varibales';
 @import '../../../util/mixins';
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
 
 @mixin text-area-style {
   font-family: $description-font;

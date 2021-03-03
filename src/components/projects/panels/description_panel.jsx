@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './description_panel.scss';
 import code from '../../../assets/icons/svg/code.svg';
 import internet from '../../../assets/icons/svg/internet.svg';
 import wrench from '../../../assets/icons/svg/wrench.svg';
 import video from '../../../assets/icons/svg/video.svg';
+import ModalVideo from 'react-modal-video'
 
 function DescriptionPanel(props) {
+
+    const [isOpen, setIsOpen] = useState(false);
 
 
     function arrayIntoListFormat(array) {
@@ -79,7 +82,7 @@ function DescriptionPanel(props) {
 
                 <div className="links">
                     <span>
-                        <img src={video} alt="link to a demo of the project"></img>
+                        <img src={video} onClick={() => setIsOpen(true)} alt="link to a demo of the project"></img>
                         <h4>Demo</h4>
                     </span>
                     <span onClick={() => goToUrl(props.githubURL)}>
@@ -89,6 +92,7 @@ function DescriptionPanel(props) {
                     {createLiveWebsiteIcon(props.liveURL)}
                 </div>
                 <div className="border_bottom_right"></div>
+                <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="cnlp3T9k7Xs" onClose={() => setIsOpen(false)} />
 
             </div>
 

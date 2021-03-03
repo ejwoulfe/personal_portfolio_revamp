@@ -28,7 +28,7 @@ function Projects() {
             && Object.keys(bdoProfitObject).length !== 0) {
 
             setProjectArray([lolChampionsObject, favMoviesObject, bdoProfitObject])
-
+            console.log(bdoProfitObject)
         }
     }, [favMoviesObject, lolChampionsObject, bdoProfitObject]);
 
