@@ -4,6 +4,7 @@ import githubWhite from '../../assets/icons/svg/github-white.svg';
 import resume from '../../assets/icons/svg/resume.svg';
 import CollapsedLinks from './navigation_links/collapsed_links';
 import ExpandedLinks from './navigation_links/expanded_links';
+import Resume from '../../assets/resume/Ed_Woulfe_Resume.pdf';
 
 function Navigation() {
 
@@ -17,11 +18,9 @@ function Navigation() {
 
     useEffect(() => {
 
-
         window.addEventListener('resize', handleResize);
 
         return () => {
-
 
             window.removeEventListener('resize', handleResize);
         }
@@ -30,20 +29,21 @@ function Navigation() {
 
 
     useEffect(() => {
+
         setWindowWith(window.innerWidth);
 
     }, [windowWidth]);
 
 
     function openTabToGithub() {
+
         window.open("https://github.com/ejwoulfe");
-    }
-    function downloadResumePDF() {
 
     }
 
-
-
+    function openResumePDF() {
+        window.open(Resume, '_self');
+    }
 
     return (
         <div id="navigation">
@@ -52,14 +52,16 @@ function Navigation() {
                     <h1 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>EJW4</h1>
                 </span>
                 <span id="resume_icon">
-                    <img src={resume} alt="pdf file of my resume"></img>
+                    <img src={resume} onClick={() => openResumePDF()} alt="pdf file of my resume"></img>
                 </span>
                 <span id="github_icon">
                     <img src={githubWhite} onClick={() => openTabToGithub()} alt="link to my github"></img>
                 </span>
 
             </div>
+
             {(windowWidth < 750) ? <CollapsedLinks></CollapsedLinks> : <ExpandedLinks></ExpandedLinks>}
+
         </div >
     )
 }

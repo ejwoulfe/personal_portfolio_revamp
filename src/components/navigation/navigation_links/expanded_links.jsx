@@ -39,28 +39,28 @@ function ExpandedLinks() {
             navBar.style.borderBottom = 'none';
         }
 
-        // Underline skills section at y threshold.
+        // Change skills color at y threshold.
         if (yPosition > topOfSkills - 101 && yPosition < topOfProjects - 101) {
             navSkills.style.color = '#d73953';
         } else {
             navSkills.style.color = '#FFFFFF';
         }
 
-        // Underline projects section at y threshold.
+        // Change projects color at y threshold.
         if (yPosition > topOfProjects - 101 && yPosition < topOfAbout - 101) {
             navProjects.style.color = '#d73953';
         } else {
             navProjects.style.color = '#FFFFFF';
         }
 
-        // Underline about me section at y threshold.
+        // Change about me color at y threshold.
         if (yPosition > topOfAbout - 101 && yPosition < topOfContact - 301) {
             navAbout.style.color = '#d73953';
         } else {
             navAbout.style.color = '#FFFFFF';
         }
 
-        // Underline contact section at y threshold.
+        // Change contact color at y threshold.
         if (yPosition > topOfContact - 300 && yPosition <= document.body.scrollHeight) {
             navContact.style.color = '#d73953';
         } else {
@@ -69,14 +69,17 @@ function ExpandedLinks() {
 
     }, [yPosition]);
 
-    
-    function goToSection(section){
-        if(section === 'contact'){
 
-        window.scrollTo({top: document.getElementById(section).offsetTop, left: 0, behavior: 'smooth'});
-        }else{
+    function goToSection(section) {
 
-        window.scrollTo({top: document.getElementById(section).offsetTop - 100, left: 0, behavior: 'smooth'});
+        if (section === 'contact') {
+
+            window.scrollTo({ top: document.getElementById(section).offsetTop, left: 0, behavior: 'smooth' });
+
+        } else {
+
+            window.scrollTo({ top: document.getElementById(section).offsetTop - 100, left: 0, behavior: 'smooth' });
+
         }
     }
 

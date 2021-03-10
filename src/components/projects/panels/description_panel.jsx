@@ -11,6 +11,7 @@ function DescriptionPanel(props) {
     const [isOpen, setIsOpen] = useState(false);
 
 
+    // Take in an array from the project object and put it into a list format.
     function arrayIntoListFormat(array) {
         return (
             <ul>
@@ -23,13 +24,14 @@ function DescriptionPanel(props) {
         )
 
     }
+
+    // Format the description array from the object into a paragraph.
     function arrayIntoDescription(descriptionText) {
         return (
             <div>
                 {descriptionText.map((value) => {
-                    return (
-                        <p>{value}</p>
-                    )
+
+                    return <p>{value}</p>;
 
                 })
                 }
@@ -37,13 +39,9 @@ function DescriptionPanel(props) {
         );
     }
 
-    function goToUrl(url) {
-
-        window.open(url);
-
-    }
-
     function createLiveWebsiteIcon(url) {
+
+        // Check if the project has a live website or not, indicated by a string if not.
         if (url === "Work in progress.") {
             return (
                 <span>
@@ -54,7 +52,7 @@ function DescriptionPanel(props) {
         } else {
             return (
 
-                <span onClick={() => goToUrl(url)}>
+                <span onClick={() => window.open(url)}>
                     <img src={internet} alt="link to live website"></img>
                     <h4>Live Website</h4>
                 </span>)
@@ -67,12 +65,16 @@ function DescriptionPanel(props) {
             <div className="description">
                 <div className="border_top_left"></div>
                 <h3>Description</h3>
+
                 {arrayIntoDescription(props.description)}
+
             </div>
 
             <div className="goals">
                 <h3>Goals</h3>
+
                 {arrayIntoListFormat(props.goals)}
+
             </div>
 
             <div className="accomplishments">
@@ -81,15 +83,17 @@ function DescriptionPanel(props) {
                 {arrayIntoListFormat(props.accomplishments)}
 
                 <div className="links">
-                    <span>
-                        <img src={video} onClick={() => setIsOpen(true)} alt="link to a demo of the project"></img>
+                    <span onClick={() => setIsOpen(true)} >
+                        <img src={video} alt="link to a demo of the project"></img>
                         <h4>Demo</h4>
                     </span>
-                    <span onClick={() => goToUrl(props.githubURL)}>
+                    <span onClick={() => window.open(props.githubURL)}>
                         <img src={code} alt="link to github repository"></img>
                         <h4>Code</h4>
                     </span>
+
                     {createLiveWebsiteIcon(props.liveURL)}
+
                 </div>
                 <div className="border_bottom_right"></div>
                 <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="cnlp3T9k7Xs" onClose={() => setIsOpen(false)} />

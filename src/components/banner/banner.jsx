@@ -6,8 +6,6 @@ import rightShape from '../../assets/banner_images/right-shape.png';
 
 function Banner() {
 
-
-
     return (
 
         <div id="banner">

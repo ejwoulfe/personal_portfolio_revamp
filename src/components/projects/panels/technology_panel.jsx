@@ -1,16 +1,14 @@
 import React from 'react';
-import './media_panel.scss';
+import './technology_panel.scss';
 
 
-function MediaPanel(props) {
-
-
-
+function TechnologyPanel(props) {
 
     function createTechIcons(techStack) {
 
-
         let jsxArray = [];
+
+        // Iterate through the object making an img for the technology icon and an h5 for the technology name.
         for (let name in techStack) {
             let techIcon = techStack[name];
 
@@ -29,7 +27,7 @@ function MediaPanel(props) {
 
     return (
 
-        <div className="media_panel">
+        <div className="technology_panel">
 
             <h1 className="project_name">{props.name}</h1>
             <img className="project_image" src={props.image} alt={props.name}></img>
@@ -48,4 +46,4 @@ function MediaPanel(props) {
         </div>
     )
 }
-export default MediaPanel;
+export default TechnologyPanel;

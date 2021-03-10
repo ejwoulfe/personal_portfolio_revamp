@@ -6,6 +6,7 @@ import chinaTown from '../../assets/about_section_images/china_town.jpg';
 
 function About() {
 
+    // State to hold the pictures in an array and to track what the current index is.
     const [imageGallery, setImageGallery] = useState([]);
     const [currentImgNum, setCurrentImgNum] = useState(0);
 
@@ -14,8 +15,7 @@ function About() {
     }, []);
 
 
-
-
+    // Create buttons for each picture in the array. The index of the current picture in the array will be greyed out.
     function createImageButtons(images) {
         return (
             images.map((image, index) => {
@@ -28,10 +28,6 @@ function About() {
             })
         )
     }
-
-
-
-
 
     function imageCarousel(images) {
         if (images.length > 0) {
@@ -56,18 +52,12 @@ function About() {
 
                 {imageCarousel(imageGallery)}
 
-
                 <div id="about_text_container">
-                    <h3 className="about_text">My name is Ed Woulfe. I am a recent college graduation with a
-                        degree in Computer Science.</h3>
-                    <h3 className="about_text">During my studies I discovered my passion for web development.
-                    Ever since, I have been studying and practicing in order to expand
-                        my web dev skills and knowledge.</h3>
-                    <h3 className="about_text">I am excited to keep learning more, improving my skills and
-                        working with others to make respectable and beautiful websites.</h3>
-                    <h3 className="about_text">All contact information can be found on my resume. A link is
-                        provided at the top of the page. Thank you!</h3>
-                        <div id="border_right"></div>
+                    <h4 className="about_text">I'm a college graduation with a bachelor's degree in Computer Science.</h4>
+                    <h4 className="about_text">During a web concepts course at university, I learned more about web development and how the front end and back end technologies work together to form the modern web. I was hooked.</h4>
+                    <h4 className="about_text">Ever since, I have been building and learning new things in order to expand
+                        my developer skills and knowledge.</h4>
+                    <div id="border_right"></div>
                 </div>
             </div>
         </div>

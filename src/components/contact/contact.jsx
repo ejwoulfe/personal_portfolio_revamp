@@ -11,7 +11,6 @@ function Contact() {
 
                 <ContactForm></ContactForm>
 
-
             </div>
         </div>
     )

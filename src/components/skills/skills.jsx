@@ -27,7 +27,6 @@ function Skills() {
                 <Card {...backEndLanguages} />
                 <Card {...toolSoftware} />
             </div>
-
         </div>
     );
 }

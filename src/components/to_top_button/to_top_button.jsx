@@ -10,10 +10,13 @@ function ToTopButton() {
     }
 
 
-    window.onscroll = function () { scrollFunction() };
+    window.onscroll = () => { scrollFunction() };
 
     function scrollFunction() {
+
         let topButton = document.getElementById("to_top_button");
+
+        // Load the button at Y-axis 850+.
         if (document.body.scrollTop > 850 || document.documentElement.scrollTop > 850) {
             topButton.style.display = "block";
         } else {

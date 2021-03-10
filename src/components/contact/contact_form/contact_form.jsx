@@ -9,6 +9,7 @@ function ContactForm() {
 
         event.preventDefault();
 
+        // Trim the fields and send them to the validation function.
         let fieldsArray = [event.target[0].value.trim(), event.target[1].value.trim(), event.target[2].value.trim()];
         let validFields = await checkFields(fieldsArray);
 

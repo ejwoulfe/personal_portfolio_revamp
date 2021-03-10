@@ -4,8 +4,11 @@ import './card.scss';
 function Card(props) {
 
     function createTechIcon(techStack) {
+
         if (techStack !== undefined) {
             let jsxArray = [];
+
+            // Iterate through the object making an img for the technology icon and an h5 for the technology name.
             for (let name in techStack) {
                 let techIcon = techStack[name];
 
@@ -32,15 +35,15 @@ function Card(props) {
             <div className="tech_stack">
                 <h4 className="weekly_title">Daily/Weekly Usage</h4>
                 <div className="weekly_usage">
-                    {createTechIcon(props.weekly)}
 
+                    {createTechIcon(props.weekly)}
 
                 </div>
                 <h4 className="past_title">Used in Past Projects/School</h4>
                 <div className="past_usage">
 
-
                     {createTechIcon(props.past)}
+
                 </div>
             </div>
             <div className="under_space"></div>
