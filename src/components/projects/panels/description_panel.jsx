@@ -96,7 +96,7 @@ function DescriptionPanel(props) {
 
                 </div>
                 <div className="border_bottom_right"></div>
-                <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="cnlp3T9k7Xs" onClose={() => setIsOpen(false)} />
+                <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={props.videoURL} onClose={() => setIsOpen(false)} />
 
             </div>
 

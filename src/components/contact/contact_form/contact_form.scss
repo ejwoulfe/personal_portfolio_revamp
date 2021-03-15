@@ -40,22 +40,22 @@
     width: 25rem;
     margin: auto;
     border: none;
-    background-color: transparent;
+    background-color: $red-pink;
+
     color: white;
-    font-family: "Oxygen",
-      sans-serif;
+    font-family: $sub-title-font;
     font-weight: 400;
     font-size: 1.5rem;
     border-radius: 5px;
     transition: 0.2s all;
-    border: solid 3px $red-pink;
-    padding: 0.2rem;
+    padding: 0.5rem;
     box-shadow: 0px 2px 4px 0px #d7395355;
 
 
     &:hover {
+      background-color: transparent;
       cursor: pointer;
-      background-color: $red-pink;
+      border: solid 1px $red-pink;
     }
 
     &:focus {

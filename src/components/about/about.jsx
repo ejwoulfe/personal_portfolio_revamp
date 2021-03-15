@@ -53,10 +53,11 @@ function About() {
                 {imageCarousel(imageGallery)}
 
                 <div id="about_text_container">
-                    <h4 className="about_text">I'm a college graduation with a bachelor's degree in Computer Science.</h4>
-                    <h4 className="about_text">During a web concepts course at university, I learned more about web development and how the front end and back end technologies work together to form the modern web. I was hooked.</h4>
-                    <h4 className="about_text">Ever since, I have been building and learning new things in order to expand
-                        my developer skills and knowledge.</h4>
+                    <h4 className="about_text">I am a college graduate with a bachelor's degree in Computer Science.</h4>
+                    <h4 className="about_text">During a web concepts course at university, I learned about web development and how the front-end and back-end technologies work together to form the modern web that we have today.</h4>
+                    <h4 className="about_text">I was <em id="hooked">hooked</em>.</h4>
+                    <h4 className="about_text">Ever since, I have been researching concepts, learning new languages, and utilizing frameworks to expand my developer skills and knowledge. I find the best way to learn new material is to build something with them.</h4>
+                    <h4 className="about_text">I'm excited to work with a talented team to create and maintain amazing websites. If you'd like to contact me, please fill out the contact form below or send me a message to my email listed on my resume. Thanks!</h4>
                     <div id="border_right"></div>
                 </div>
             </div>

@@ -26,7 +26,8 @@ function createBDOProfitObject(object){
         goals: ["Create a relational database schema and implement it.", "Use web scrapping to collect a large amount of data around in-game items without access to a public API.", "Learn how the front and back end of an application work and come together to create a full stack web application.", "Learn a lot."],
         accomplishments: ["Planned and implemented multiple tables with one-to-many and many-to-many relationships.",
         "Using Puppeteer, webscrapped thousands of item data. Formatted and exported that information to an sql database.",
-        "Successfully connected the database to the front end of my application.", "Created search queries which successfully retrieved item data in a heavily populated table."]
+        "Successfully connected the database to the front end of my application.", "Created search queries which successfully retrieved item data in a heavily populated table."],
+        videoURL: "pJPPptodu5g"
 
     }
     return object;
