@@ -13,3 +13,5 @@ HTML, CSS, React, Sass/Scss
 Tools:
 Figma, Github, Git, NPM
 
+![Image of Figma Design](https://imgur.com/a/liVmwoy)
+
