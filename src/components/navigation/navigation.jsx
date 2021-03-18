@@ -42,7 +42,8 @@ function Navigation() {
     }
 
     function openResumePDF() {
-        window.open(Resume, '_self');
+        window.open(Resume);
+
     }
 
     return (

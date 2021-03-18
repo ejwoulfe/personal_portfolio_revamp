@@ -18,7 +18,7 @@ function createLolChampionsObject(object){
             Sass: sass,
             Bootstrap: bootstrap
         },
-        liveURL: "https://pensive-visvesvaraya-5f7d28.netlify.com/",
+        liveURL: "https://lol-champions.netlify.app/",
         githubURL: "https://github.com/ejwoulfe/lol-champions",
         description: ["LoL champions was made to help players of the game, League of Legends, find detailed information on all of its 154 playable champions.", "With this website a user can search for a specefic champion, browse a list of all of the champions, see which champions are being played the most in different ranked tiers, and see which ones are available to play free in the current week.", "*All information is obtained using AWS API Gateway connecting to the Riot Games Public API."],
         goals: ["Learn React and how Single Page Applications work with the DOM.", "Learn how to fetch data from an API.", "Filter fetch requests.", "Use methods/strategies to keep the amount of request to a minimum.", "Learn about css preprocessors.", "Build an AWS Rest API to enable CORS for my fetch requests to the Riot Games API."],
