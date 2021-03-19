@@ -1,7 +1,6 @@
 import React from 'react';
 import './contact_form.scss';
 import emailjs from 'emailjs-com';
-import userID from '../../../util/emailjs_info';
 
 function ContactForm() {
 
@@ -14,7 +13,7 @@ function ContactForm() {
         let validFields = await checkFields(fieldsArray);
 
         if (validFields === true) {
-            await emailjs.sendForm('gmail_id', 'template_aye077j', event.target, userID)
+            await emailjs.sendForm('gmail_id', 'template_aye077j', event.target, process.env.REACT_APP_USER_ID)
                 .then((result) => {
 
                     if (result.text === "OK") {
