@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './banner.scss';
 import leftShape from '../../assets/banner_images/left-shape.png';
 import rightShape from '../../assets/banner_images/right-shape.png';
