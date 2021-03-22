@@ -25,7 +25,7 @@
     flex-wrap: nowrap;
     color: white;
 
-    .weekly_title {
+    .proficient_title {
       padding-top: 0.5rem;
       padding-left: 2rem;
       text-align: left;
@@ -34,7 +34,7 @@
       font-size: 1.3rem;
     }
 
-    .past_title {
+    .familiar_title {
       padding-left: 2rem;
       text-align: left;
       font-family: $title-font;
@@ -42,11 +42,11 @@
       font-size: 1.3rem;
     }
 
-    .weekly_usage {
+    .proficient_languages {
       @include tech-usage-container;
     }
 
-    .past_usage {
+    .familiar_languages {
       @include tech-usage-container;
       height: 8rem;
       padding-bottom: 1rem;

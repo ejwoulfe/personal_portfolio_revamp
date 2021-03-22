@@ -9,14 +9,14 @@ import jquery from '../../../assets/icons/png/jquery.png';
 function fillFrontEndLanguages(obj){
     obj = {
         type: "Front End",
-        weekly: {
+        proficient: {
             HTML5: html5,
             CSS3: css3,
             Javascript: javascript,
             React: react,
             Sass: sass
         },
-        past: {
+        familiar: {
             Bootstrap: bootstrap,
             jQuery: jquery
         }

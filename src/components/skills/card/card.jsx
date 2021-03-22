@@ -33,16 +33,16 @@ function Card(props) {
 
             <h3 className="card_title">{props.type}</h3>
             <div className="tech_stack">
-                <h4 className="weekly_title">Proficient at</h4>
-                <div className="weekly_usage">
+                <h4 className="proficient_title">Proficient at</h4>
+                <div className="proficient_languages">
 
-                    {createTechIcon(props.weekly)}
+                    {createTechIcon(props.proficient)}
 
                 </div>
-                <h4 className="past_title">Familiar with</h4>
-                <div className="past_usage">
+                <h4 className="familiar_title">Familiar with</h4>
+                <div className="familiar_languages">
 
-                    {createTechIcon(props.past)}
+                    {createTechIcon(props.familiar)}
 
                 </div>
             </div>

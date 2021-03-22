@@ -17,7 +17,7 @@ function DescriptionPanel(props) {
             <ul>
                 {array.map((value, index) => {
                     return (
-                        <li className="list_item" key={index}>{value}</li>
+                        <li className="list_item" key={"list_item_" + index}>{value}</li>
                     )
                 })}
             </ul>
@@ -29,9 +29,9 @@ function DescriptionPanel(props) {
     function arrayIntoDescription(descriptionText) {
         return (
             <div>
-                {descriptionText.map((value) => {
+                {descriptionText.map((value, index) => {
 
-                    return <p>{value}</p>;
+                    return <p key={"description_section_" + index}>{value}</p>;
 
                 })
                 }

@@ -9,14 +9,14 @@ import gitlab from '../../../assets/icons/png/gitlab.png';
 function fillToolSoftware(obj){
     obj = {
         type: "Tools",
-        weekly: {
+        proficient: {
             Github: github,
             Git: git,
             npm: npm,
             Figma: figma,
             Jira: jira
         },
-        past: {
+        familiar: {
             Photoshop: photoshop,
             Gitlab: gitlab
         }
