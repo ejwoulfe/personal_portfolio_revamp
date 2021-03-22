@@ -8,6 +8,7 @@
   width: 100%;
   margin-top: 80px;
   justify-content: center;
+  min-height: 900px;
 }
 
 
@@ -65,6 +66,18 @@
   }
 
 
+}
+
+@media (max-width: 1424px) {
+  #main_content #banner {
+    min-height: 40rem;
+  }
+}
+
+@media (max-width: 949px) {
+  #main_content #banner {
+    min-height: 30rem;
+  }
 }
 
 @media (max-width: 610px) {

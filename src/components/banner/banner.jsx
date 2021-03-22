@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './banner.scss';
 import leftShape from '../../assets/banner_images/left-shape.png';
 import rightShape from '../../assets/banner_images/right-shape.png';
@@ -6,8 +6,8 @@ import rightShape from '../../assets/banner_images/right-shape.png';
 
 function Banner() {
 
-    return (
 
+    return (
         <div id="banner">
             <img id="left_shape" src={leftShape} alt="shape with code background"></img>
             <div id="personal_info">
