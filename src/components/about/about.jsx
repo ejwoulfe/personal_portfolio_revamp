@@ -20,9 +20,9 @@ function About() {
         return (
             images.map((image, index) => {
                 if (index === currentImgNum) {
-                    return <button key={"personal_image_" + index} className="carousel_button_current" onClick={() => setCurrentImgNum(index)}></button>
+                    return <button aria-label="current_button" key={"personal_image_" + index} className="carousel_button_current" onClick={() => setCurrentImgNum(index)}></button>
                 } else {
-                    return <button key={"personal_image_" + index} className="carousel_button" onClick={() => setCurrentImgNum(index)}></button>
+                    return <button aria-label="image_button" key={"personal_image_" + index} className="carousel_button" onClick={() => setCurrentImgNum(index)}></button>
 
                 }
             })

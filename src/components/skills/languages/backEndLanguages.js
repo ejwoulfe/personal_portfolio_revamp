@@ -6,10 +6,9 @@ import mongodb from '../../../assets/icons/svg/mongodb.svg';
 function fillBackEndLanguages(obj){
     obj = {
         type: "Back End",
-        proficient: {
-            Node: node
-        },
+        proficient: null,
         familiar: {
+            Node: node,
             PHP: php,
             MySQL: mysql,
             MongoDB: mongodb
