@@ -69,12 +69,18 @@
 }
 
 @media (max-width: 1424px) {
+  .loader {
+    margin-top: 250px;
+  }
+
   #main_content #banner {
     min-height: 40rem;
   }
 }
 
 @media (max-width: 949px) {
+
+
   #main_content #banner {
     min-height: 30rem;
   }
