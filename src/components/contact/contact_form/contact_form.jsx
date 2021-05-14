@@ -4,58 +4,77 @@ import emailjs from 'emailjs-com';
 
 function ContactForm() {
 
-    async function sendEmail(event) {
 
-        event.preventDefault();
+    // Retrieve all input field values, ignoring the send button, and put them into an array for validation.
+    function getInputFieldValues(form) {
 
-        // Trim the fields and send them to the validation function.
-        let fieldsArray = [event.target[0].value.trim(), event.target[1].value.trim(), event.target[2].value.trim()];
-        let validFields = await checkFields(fieldsArray);
+        let inputValuesArray = [];
 
-        if (validFields === true) {
-            await emailjs.sendForm('gmail_id', 'template_aye077j', event.target, process.env.REACT_APP_USER_ID)
-                .then((result) => {
+        for (let i = 0; i < form.length; i++) {
 
-                    if (result.text === "OK") {
-                        event.target.reset();
+            if (form[i].id !== "send_button") {
 
-                    }
-                }, (error) => {
+                inputValuesArray.push(form[i].value);
 
-                    alert("Error: " + error.text);
-                });
-
-            disableButton();
-
-        } else if (typeof validFields === 'string') {
-
-            alert(validFields);
+            }
         }
 
+        return inputValuesArray;
     }
 
-    // Function to return true if text fields are valid, returns a string with an error message if not.
-    function checkFields(formFields) {
+    // Function to validate the input fields.
+    async function validateFields(event) {
 
-        let errorMessage = "";
+        event.preventDefault();
+        let formObject = event.target;
+        let formFieldValues = await getInputFieldValues(formObject)
 
         // Check if each field isn't empty.
-        for (let i = 0; i < formFields.length; i++) {
-            if (formFields[i].length < 1) {
-                errorMessage = "Please make sure all fields are filled."
-                return errorMessage;
+        for (let i = 0; i < formFieldValues.length; i++) {
+            if (formFieldValues[i].length < 1) {
+
+                alert("Please make sure all fields are filled.");
+                return false;
             }
         }
 
         // Check if email is a valid email.
-        if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(formFields[1]))) {
+        if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(formFieldValues[1]))) {
 
-            errorMessage = "The email adress entered is invalid."
-            return errorMessage;
+            alert("The email address entered is invalid.");
+
+            return false;
+
         }
 
-        return true;
+        // If all validations pass, we call the send email function.
+        sendEmail(formObject);
     }
+
+
+
+    // Function to send email to address using emailjs.
+    async function sendEmail(form) {
+
+
+        await emailjs.sendForm('gmail_id', 'template_aye077j', form, process.env.REACT_APP_USER_ID)
+            .then((result) => {
+
+                if (result.text === "OK") {
+                    form.reset();
+
+                }
+            }, (error) => {
+
+                alert("Error: " + error.text);
+            });
+
+        disableButton();
+
+    }
+
+
+
 
     // Disable send button and input fields on successful message sent.
     function disableButton() {
@@ -77,7 +96,7 @@ function ContactForm() {
 
     return (
 
-        <form className="contact_form" onSubmit={sendEmail}>
+        <form className="contact_form" onSubmit={validateFields}>
             <label htmlFor="name_input" className="form_label">Name</label>
             <input id="name_input" className="form_field" type="text" name="name" />
             <label htmlFor="email_input" className="form_label">Email</label>
