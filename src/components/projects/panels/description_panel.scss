@@ -62,37 +62,6 @@
     border-bottom: solid 1px #FFFFFF;
   }
 
-  .links {
-    padding: 2rem 0rem 1.5rem 0rem;
-    text-align: center;
-    display: flex;
-    flex-flow: row nowrap;
-
-    span {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      justify-content: center;
-      flex-basis: 33%;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-
-    img {
-      width: 3.5rem;
-      height: 3.5rem;
-      margin-right: .2rem;
-    }
-
-    h4 {
-      font-family: $sub-title-font;
-      font-weight: $regular;
-      margin: 0;
-      font-size: $desc-links-font-size;
-    }
-  }
 }
 
 @media (max-width: 1500px) {

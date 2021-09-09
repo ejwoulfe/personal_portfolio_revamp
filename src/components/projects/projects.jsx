@@ -17,7 +17,7 @@ function Projects() {
 
     useEffect(() => {
 
-        setProjectArray([lolChampionsProject, favMoviesProject, bdoProfitProject])
+        setProjectArray([lolChampionsProject, bdoProfitProject, favMoviesProject,])
 
     }, [])
 

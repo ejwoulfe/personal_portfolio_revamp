@@ -62,6 +62,45 @@
   }
 }
 
+.links {
+  padding: 0rem 0rem 1rem 0rem;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 65%;
+  margin: auto;
+
+  span {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 33%;
+    margin-right: 0.5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: .2rem;
+
+  }
+
+  h4 {
+    font-family: $sub-title-font;
+    font-weight: $regular;
+    margin: 0;
+    font-size: $desc-links-font-size;
+    text-decoration: underline;
+
+
+  }
+}
+
 
 
 @media (max-width: 660px) {
