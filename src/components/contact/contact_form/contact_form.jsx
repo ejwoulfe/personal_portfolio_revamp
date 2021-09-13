@@ -96,7 +96,7 @@ function ContactForm() {
 
     return (
 
-        <form className="contact_form" onSubmit={validateFields}>
+        <form data-testid="contact-form" className="contact_form" onSubmit={validateFields}>
             <label htmlFor="name_input" className="form_label">Name</label>
             <input id="name_input" className="form_field" type="text" name="name" />
             <label htmlFor="email_input" className="form_label">Email</label>
