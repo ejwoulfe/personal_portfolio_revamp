@@ -102,7 +102,7 @@ function ContactForm() {
             <label htmlFor="email_input" className="form_label">Email</label>
             <input id="email_input" className="form_field" type="email" name="email" />
             <label htmlFor="form_text_area" className="form_label">Message</label>
-            <textarea className="form_field" id="form_text_area" name="message" />
+            <textarea className="form_field" id="form_text_area" maxLength="200" name="message" />
             <input id="send_button" type="submit" value="Send" />
         </form>
     );

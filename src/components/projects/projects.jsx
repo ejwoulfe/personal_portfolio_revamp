@@ -2,16 +2,15 @@ import React, { useEffect, useState } from 'react';
 import TechnologyPanel from './panels/technology_panel';
 import DescriptionPanel from './panels/description_panel';
 import './projects.scss';
-import favMoviesProject from './project_objects/favorite_movies';
-import lolChampionsProject from './project_objects/lol_champions';
-import bdoProfitProject from './project_objects/bdoprofit';
+import favMoviesProject from './project_objects/favorite_movies.ts';
+import lolChampionsProject from './project_objects/lol_champions.ts';
+import bdoProfitProject from './project_objects/bdoprofit.ts';
 
 
 
 function Projects() {
 
-
-    // State to hold each project object and an array which holds all the project objects.
+    // State to hold each skill object and an array which holds all the skill objects.
     const [projectArray, setProjectArray] = useState([]);
 
 
@@ -20,12 +19,6 @@ function Projects() {
         setProjectArray([lolChampionsProject, bdoProfitProject, favMoviesProject,])
 
     }, [])
-
-
-
-
-
-
 
 
     function createProjects(projectsArr) {

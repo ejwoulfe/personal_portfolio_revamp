@@ -8,8 +8,8 @@ import ToTopButton from './components/to_top_button/to_top_button';
 
 
 
-function App(){
-    return(
+function App() {
+    return (
 
         <div id="main_content">
             <Navigation></Navigation>

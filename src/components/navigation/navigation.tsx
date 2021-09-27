@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './navigation.scss';
 import githubWhite from '../../assets/icons/svg/github-white.svg';
 import resume from '../../assets/icons/svg/resume.svg';
 import CollapsedLinks from './navigation_links/collapsed_links';
 import ExpandedLinks from './navigation_links/expanded_links';
-import Resume from '../../assets/resume/Ed_Woulfe_Resume.pdf';
 
 function Navigation() {
 
-    const [windowWidth, setWindowWith] = useState(window.innerWidth);
+    const [windowWidth, setWindowWith] = useState<number>(window.innerWidth);
+
 
 
     let handleResize = () => {
+
 
         setWindowWith(window.innerWidth);
     }
@@ -42,7 +43,7 @@ function Navigation() {
     }
 
     function openResumePDF() {
-        window.open(Resume);
+        window.open('../../assets/resume/Ed_Woulfe_Resume.pdf');
 
     }
 

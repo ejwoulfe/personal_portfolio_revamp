@@ -7,20 +7,21 @@ import mysql from '../../../assets/icons/svg/mysql.svg';
 import jquery from '../../../assets/icons/png/jquery.png';
 import node from '../../../assets/icons/png/node.png';
 import projectImage from '../../../assets/project_images/bdoprofit.png';
-import Project from './project_object_model';
+import PersonalProject from '../../../models/project_model';
+import Project from '../../../interfaces/project_interface';
 
-let bdoProfitProject = new Project(
+let bdoProfitProject: Project = new PersonalProject(
     "BDOProfit",
     projectImage, {
-        HTML5: html5,
-        CSS3: css3,
-        Javascript: javascript,
-        Bootstrap: bootstrap,
-        jQuery: jquery,
-        PHP: php,
-        MySQL: mysql,
-        Node: node
-    },
+    HTML5: html5,
+    CSS3: css3,
+    Javascript: javascript,
+    Bootstrap: bootstrap,
+    jQuery: jquery,
+    PHP: php,
+    MySQL: mysql,
+    Node: node
+},
     "https://bdoprofit.com",
     "https://github.com/ejwoulfe/BDOProfit",
     "pJPPptodu5g",

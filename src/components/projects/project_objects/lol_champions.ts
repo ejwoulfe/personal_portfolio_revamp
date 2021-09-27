@@ -5,18 +5,19 @@ import react from '../../../assets/icons/png/react.png';
 import sass from '../../../assets/icons/png/sass.png';
 import bootstrap from '../../../assets/icons/svg/bootstrap.svg';
 import projectImage from '../../../assets/project_images/lol-champions.png';
-import Project from './project_object_model';
+import PersonalProject from '../../../models/project_model';
+import Project from '../../../interfaces/project_interface';
 
-let lolChampionsProject = new Project(
+let lolChampionsProject: Project = new PersonalProject(
     "LoL Champions",
     projectImage, {
-        HTML5: html5,
-        CSS3: css3,
-        Javascript: javascript,
-        React: react,
-        Sass: sass,
-        Bootstrap: bootstrap
-    },
+    HTML5: html5,
+    CSS3: css3,
+    Javascript: javascript,
+    React: react,
+    Sass: sass,
+    Bootstrap: bootstrap
+},
     "https://lol-champions.netlify.app/",
     "https://github.com/ejwoulfe/lol-champions",
     "bQQMlrC5dS8",

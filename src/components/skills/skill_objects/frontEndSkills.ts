@@ -5,23 +5,20 @@ import react from '../../../assets/icons/png/react.png';
 import sass from '../../../assets/icons/png/sass.png';
 import bootstrap from '../../../assets/icons/svg/bootstrap.svg';
 import jquery from '../../../assets/icons/png/jquery.png';
+import PersonalSkills from '../../../models/skills_model';
+import Skills from '../../../interfaces/skills_interface';
 
-function fillFrontEndLanguages(obj){
-    obj = {
-        type: "Front End",
-        proficient: {
-            HTML5: html5,
-            CSS3: css3,
-            Javascript: javascript,
-            React: react,
-            Sass: sass
-        },
-        familiar: {
-            Bootstrap: bootstrap,
-            jQuery: jquery
-        }
-    }
-    return obj;
+
+let frontEndSkills: Skills = new PersonalSkills(
+    "Front End", {
+    HTML5: html5,
+    CSS3: css3,
+    Javascript: javascript,
+    React: react,
+    Sass: sass
+}, {
+    Bootstrap: bootstrap,
+    jQuery: jquery
 }
-
-export default fillFrontEndLanguages;
+)
+export default frontEndSkills;

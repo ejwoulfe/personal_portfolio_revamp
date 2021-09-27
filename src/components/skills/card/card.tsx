@@ -1,10 +1,10 @@
-import React from 'react';
 import './card.scss';
+import Skills from '../../../interfaces/skills_interface';
 
-function Card(props) {
+function Card({ type, proficient, familiar }: Skills) {
 
 
-    function createTechIcon(techStack) {
+    function createTechIcon(techStack: Record<string, any>) {
 
         let jsxArray = [];
 
@@ -26,14 +26,14 @@ function Card(props) {
 
     }
 
-    function createProficientTechStack(techStack) {
+    function createProficientTechStack(techStack: Record<string, any>) {
 
         if (techStack !== null) {
             return (
                 <div>
                     <h4 className="proficient_title">Proficient at</h4>
                     <div className="proficient_languages">
-                        {createTechIcon(props.proficient)}
+                        {createTechIcon(proficient)}
                     </div>
                 </div>
             )
@@ -41,14 +41,14 @@ function Card(props) {
 
     }
 
-    function createFamiliarTechStack(techStack) {
+    function createFamiliarTechStack(techStack: Record<string, any>) {
 
         if (techStack !== null) {
             return (
                 <div id="familiar_container">
                     <h4 className="familiar_title">Familiar with</h4>
                     <div className="familiar_languages">
-                        {createTechIcon(props.familiar)}
+                        {createTechIcon(familiar)}
                     </div>
                 </div>
             )
@@ -62,12 +62,12 @@ function Card(props) {
         <div className="card">
             <div className="over_space"></div>
 
-            <h3 className="card_title">{props.type}</h3>
+            <h3 className="card_title">{type}</h3>
             <div className="tech_stack">
 
-                {Object.keys(props).length > 0 ? createProficientTechStack(props.proficient) : null}
+                {type === undefined ? null : createProficientTechStack(proficient)}
 
-                {Object.keys(props).length > 0 ? createFamiliarTechStack(props.familiar) : null}
+                {type === undefined ? null : createFamiliarTechStack(familiar)}
 
             </div>
             <div className="under_space"></div>

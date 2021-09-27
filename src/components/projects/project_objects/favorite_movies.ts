@@ -6,19 +6,20 @@ import sass from '../../../assets/icons/png/sass.png';
 import node from '../../../assets/icons/png/node.png';
 import mongodb from '../../../assets/icons/svg/mongodb.svg';
 import projectImage from '../../../assets/project_images/favorite-movies.png';
-import Project from './project_object_model';
+import PersonalProject from '../../../models/project_model';
+import Project from '../../../interfaces/project_interface';
 
-let favoriteMoviesProject = new Project(
+let favoriteMoviesProject: Project = new PersonalProject(
     "Favorite Movies",
     projectImage, {
-        HTML5: html5,
-        CSS3: css3,
-        Javascript: javascript,
-        React: react,
-        Sass: sass,
-        Node: node,
-        MongoDB: mongodb
-    },
+    HTML5: html5,
+    CSS3: css3,
+    Javascript: javascript,
+    React: react,
+    Sass: sass,
+    Node: node,
+    MongoDB: mongodb
+},
     "Work in progress.",
     "https://github.com/ejwoulfe/favorite-movies",
     "75jnHmUn5_0",
