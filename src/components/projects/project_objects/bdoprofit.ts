@@ -8,7 +8,7 @@ import jquery from '../../../assets/icons/png/jquery.png';
 import node from '../../../assets/icons/png/node.png';
 import projectImage from '../../../assets/project_images/bdoprofit.png';
 import PersonalProject from '../../../models/project_model';
-import Project from '../../../interfaces/project_interface';
+import { Project } from '../../../interfaces/project_interface';
 
 let bdoProfitProject: Project = new PersonalProject(
     "BDOProfit",

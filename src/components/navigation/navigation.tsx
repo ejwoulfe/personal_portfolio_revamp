@@ -43,8 +43,8 @@ function Navigation() {
     }
 
     function openResumePDF() {
-        window.open('../../assets/resume/Ed_Woulfe_Resume.pdf');
 
+        window.open('../../assets/resume/Edmond_Woulfe_Resume.pdf');
     }
 
     return (

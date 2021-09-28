@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react';
-import frontEndSkills from './skill_objects/frontEndSkills.ts';
-import backEndSkills from './skill_objects/backEndSkills.ts';
-import toolSoftwareSkills from './skill_objects/toolSoftware.ts';
+import frontEndSkills from './skill_objects/frontEndSkills';
+import backEndSkills from './skill_objects/backEndSkills';
+import toolSoftwareSkills from './skill_objects/toolSoftware';
 import Card from './card/card';
-import './skills.scss';
+import './skills_container.scss';
+import Skills from '../../interfaces/skills_interface';
 
-function Skills() {
+function SkillsContainer() {
 
 
     // State to hold each project object and an array which holds all the project objects.
-    const [skillsArray, setSkillsArray] = useState<Array<object>>([]);
+    const [skillsArray, setSkillsArray] = useState<Skills[]>([]);
 
     useEffect(() => {
 
@@ -17,7 +18,7 @@ function Skills() {
     }, [])
 
 
-    function createSkills(skillsArr) {
+    function createSkills(skillsArr: Skills[]) {
 
         return skillsArr.map((value) => (
             <Card  {...value} />
@@ -36,4 +37,4 @@ function Skills() {
     );
 }
 
-export default Skills;
+export default SkillsContainer;

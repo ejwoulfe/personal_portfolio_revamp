@@ -7,7 +7,7 @@ import node from '../../../assets/icons/png/node.png';
 import mongodb from '../../../assets/icons/svg/mongodb.svg';
 import projectImage from '../../../assets/project_images/favorite-movies.png';
 import PersonalProject from '../../../models/project_model';
-import Project from '../../../interfaces/project_interface';
+import { Project } from '../../../interfaces/project_interface';
 
 let favoriteMoviesProject: Project = new PersonalProject(
     "Favorite Movies",

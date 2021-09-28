@@ -1,13 +1,14 @@
-import React from 'react';
+import { Project } from '../../../interfaces/project_interface';
 import './description_panel.scss';
 
 
-function DescriptionPanel(props) {
+function DescriptionPanel({ description, goals, accomplishments }: Project) {
+
 
 
 
     // Take in an array from the project object and put it into a list format.
-    function arrayIntoListFormat(array) {
+    function arrayIntoListFormat(array: string[]) {
         return (
             <ul>
                 {array.map((value, index) => {
@@ -21,7 +22,7 @@ function DescriptionPanel(props) {
     }
 
     // Format the description array from the object into a paragraph.
-    function arrayIntoDescription(descriptionText) {
+    function arrayIntoDescription(descriptionText: string[]) {
         return (
             <div>
                 {descriptionText.map((value, index) => {
@@ -42,21 +43,21 @@ function DescriptionPanel(props) {
                 <div className="border_top_left"></div>
                 <h3>Description</h3>
 
-                {arrayIntoDescription(props.description)}
+                {arrayIntoDescription(description)}
 
             </div>
 
             <div className="goals">
                 <h3>Goals</h3>
 
-                {arrayIntoListFormat(props.goals)}
+                {arrayIntoListFormat(goals)}
 
             </div>
 
             <div className="accomplishments">
                 <h3>Accomplishments</h3>
 
-                {arrayIntoListFormat(props.accomplishments)}
+                {arrayIntoListFormat(accomplishments)}
 
 
                 <div className="border_bottom_right"></div>

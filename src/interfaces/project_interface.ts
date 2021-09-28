@@ -1,12 +1,15 @@
+export interface techStack {
+    [name: string]: string
+};
 
-export default interface Project {
+export interface Project {
     name: string;
     image: string;
-    techStack: object;
+    techStack: techStack;
     liveURL: string;
     githubURL: string;
     videoURL: string;
-    description: Array<string>;
-    goals: Array<string>;
-    accomplishments: Array<string>;
+    description: string[];
+    goals: string[];
+    accomplishments: string[];
 }

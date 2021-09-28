@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './banner.scss';
 import leftShape from '../../assets/banner_images/left-shape.png';
 import rightShape from '../../assets/banner_images/right-shape.png';
@@ -6,8 +6,8 @@ import rightShape from '../../assets/banner_images/right-shape.png';
 
 function Banner() {
 
-    const [leftshapeLoaded, setLeftShapeLoaded] = useState(false);
-    const [rightshapeLoaded, setRightShapeLoaded] = useState(false);
+    const [leftshapeLoaded, setLeftShapeLoaded] = useState<boolean>(false);
+    const [rightshapeLoaded, setRightShapeLoaded] = useState<boolean>(false);
 
 
     useEffect(() => {
@@ -15,7 +15,7 @@ function Banner() {
 
     }, [])
 
-    function renderBannerContect() {
+    function renderBannerContect(): JSX.Element {
         return (
             <div id="banner">
                 <img id="left_shape" src={leftShape} alt="shape with code background"></img>
@@ -33,7 +33,7 @@ function Banner() {
         )
     }
 
-    function loadingSpinner() {
+    function loadingSpinner(): JSX.Element {
         return (
             <div id="banner">
                 <div className="loader"></div>

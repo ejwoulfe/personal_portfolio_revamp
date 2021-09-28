@@ -9,8 +9,8 @@ import envelope from '../../../assets/icons/svg/envelope.svg';
 
 function CollapsedLinks() {
 
-    const [windowWidth, setWindowWith] = useState(window.innerWidth);
-    const [menuVisibility, setMenuVisibility] = useState(false);
+    const [windowWidth, setWindowWith] = useState<number>(window.innerWidth);
+    const [menuVisibility, setMenuVisibility] = useState<boolean>(false);
 
 
     useEffect(() => {
@@ -40,10 +40,24 @@ function CollapsedLinks() {
 
     // The only situation we want the drop down to be visible is when the user clicks on the button.
     // So hide the menu on a click that isn't the drop down menu button.
-    let detectClick = (event) => {
+    let detectClick = (event: any) => {
+
 
         if (event.target.id !== 'bars_menu') {
             setMenuVisibility(false)
+        }
+    }
+
+
+    function goToSection(section: string) {
+
+        if (section === 'contact') {
+
+            window.scrollTo({ top: document.getElementById(section).offsetTop, left: 0, behavior: 'smooth' });
+
+        } else {
+
+            window.scrollTo({ top: document.getElementById(section).offsetTop - 100, left: 0, behavior: 'smooth' });
         }
     }
 
@@ -61,17 +75,6 @@ function CollapsedLinks() {
         );
     }
 
-    function goToSection(section) {
-
-        if (section === 'contact') {
-
-            window.scrollTo({ top: document.getElementById(section).offsetTop, left: 0, behavior: 'smooth' });
-
-        } else {
-
-            window.scrollTo({ top: document.getElementById(section).offsetTop - 100, left: 0, behavior: 'smooth' });
-        }
-    }
 
 
     return (

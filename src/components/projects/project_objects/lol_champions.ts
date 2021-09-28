@@ -6,7 +6,7 @@ import sass from '../../../assets/icons/png/sass.png';
 import bootstrap from '../../../assets/icons/svg/bootstrap.svg';
 import projectImage from '../../../assets/project_images/lol-champions.png';
 import PersonalProject from '../../../models/project_model';
-import Project from '../../../interfaces/project_interface';
+import { Project } from '../../../interfaces/project_interface';
 
 let lolChampionsProject: Project = new PersonalProject(
     "LoL Champions",

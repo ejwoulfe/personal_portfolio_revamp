@@ -3,11 +3,13 @@ import './expanded_links.scss';
 
 function ExpandedLinks() {
 
-    const [yPosition, setYPosition] = useState(window.scrollY);
+    const [yPosition, setYPosition] = useState<number>(window.scrollY);
+
     let handleYPosition = () => {
 
         setYPosition(window.pageYOffset);
     }
+
     useEffect(() => {
 
         window.addEventListener('scroll', handleYPosition);
@@ -70,7 +72,7 @@ function ExpandedLinks() {
     }, [yPosition]);
 
 
-    function goToSection(section) {
+    function goToSection(section: string) {
 
         if (section === 'contact') {
 

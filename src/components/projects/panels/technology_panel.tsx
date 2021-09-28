@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './technology_panel.scss';
 import github from '../../../assets/icons/svg/github-white.svg';
 import internet from '../../../assets/icons/svg/internet.svg';
 import wrench from '../../../assets/icons/svg/wrench.svg';
 import video from '../../../assets/icons/svg/play-button.svg';
-import ModalVideo from 'react-modal-video'
+import ModalVideo from 'react-modal-video';
+import { techStack, Project } from '../../../interfaces/project_interface';
 
-function TechnologyPanel(props) {
+
+function TechnologyPanel({ name, image, githubURL, liveURL, videoURL, techStack }: Project) {
+
 
     const [isOpen, setIsOpen] = useState(false);
 
-    function createTechIcons(techStack) {
+    function createTechIcons(techStack: techStack): JSX.Element[] {
 
         let jsxArray = [];
 
@@ -30,7 +33,8 @@ function TechnologyPanel(props) {
 
         return jsxArray;
     }
-    function createLiveWebsiteIcon(url) {
+
+    function createLiveWebsiteIcon(url: string): JSX.Element {
 
         // Check if the project has a live website or not, indicated by a string if not.
         if (url === "Work in progress.") {
@@ -55,28 +59,28 @@ function TechnologyPanel(props) {
 
         <div className="technology_panel">
 
-            <h1 className="project_name">{props.name}</h1>
-            <img className="project_image" src={props.image} alt={props.name}></img>
+            <h1 className="project_name">{name}</h1>
+            <img className="project_image" src={image} alt={name}></img>
             <div className="links">
                 <span onClick={() => setIsOpen(true)} >
                     <img src={video} alt="link to a demo of the project"></img>
                     <h4>Demo</h4>
                 </span>
-                <span onClick={() => window.open(props.githubURL)}>
+                <span onClick={() => window.open(githubURL)}>
                     <img src={github} alt="link to github repository"></img>
                     <h4>GitHub</h4>
                 </span>
 
-                {createLiveWebsiteIcon(props.liveURL)}
+                {createLiveWebsiteIcon(liveURL)}
 
             </div>
-            <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={props.videoURL} onClose={() => setIsOpen(false)} />
+            <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={videoURL} onClose={() => setIsOpen(false)} />
             <h3 className="tech_title">Technologies Used</h3>
             <div className="project_tech">
                 <div className="border_top_left"></div>
                 <div className="border_top_right"></div>
 
-                {createTechIcons(props.techStack)}
+                {createTechIcons(techStack)}
 
                 <div className="border_bottom_left"></div>
                 <div className="border_bottom_right"></div>

@@ -2,16 +2,17 @@ import React, { useEffect, useState } from 'react';
 import TechnologyPanel from './panels/technology_panel';
 import DescriptionPanel from './panels/description_panel';
 import './projects.scss';
-import favMoviesProject from './project_objects/favorite_movies.ts';
-import lolChampionsProject from './project_objects/lol_champions.ts';
-import bdoProfitProject from './project_objects/bdoprofit.ts';
+import favMoviesProject from './project_objects/favorite_movies';
+import lolChampionsProject from './project_objects/lol_champions';
+import bdoProfitProject from './project_objects/bdoprofit';
+import { Project } from '../../interfaces/project_interface';
 
 
 
-function Projects() {
+function ProjectsContainer() {
 
     // State to hold each skill object and an array which holds all the skill objects.
-    const [projectArray, setProjectArray] = useState([]);
+    const [projectArray, setProjectArray] = useState<Project[]>([]);
 
 
     useEffect(() => {
@@ -21,15 +22,16 @@ function Projects() {
     }, [])
 
 
-    function createProjects(projectsArr) {
-
+    function createProjects(projectsArr: Project[]): JSX.Element[] {
 
         return projectsArr.map((value, index) => (
+
+
 
             <div key={"project_" + index + 1} className="project_info" >
                 <TechnologyPanel {...value} />
                 <DescriptionPanel {...value} />
-            </div>
+            </div >
 
         ))
     }
@@ -46,4 +48,4 @@ function Projects() {
         </div>
     );
 }
-export default Projects;
+export default ProjectsContainer;
