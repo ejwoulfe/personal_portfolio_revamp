@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './navigation.scss';
 import githubWhite from '../../assets/icons/svg/github-white.svg';
 import resume from '../../assets/icons/svg/resume.svg';
+import resumePDF from '../../assets/resume/Edmond_Woulfe_Resume.pdf';
 import CollapsedLinks from './navigation_links/collapsed_links';
 import ExpandedLinks from './navigation_links/expanded_links';
 
@@ -44,7 +45,7 @@ function Navigation() {
 
     function openResumePDF() {
 
-        window.open('../../assets/resume/Edmond_Woulfe_Resume.pdf');
+        window.open(resumePDF);
     }
 
     return (
