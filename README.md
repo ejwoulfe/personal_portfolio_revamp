@@ -6,7 +6,7 @@ This is my personal portfolio website.
  
  ## Built With
  Front End:
-HTML, CSS, React, Sass/Scss
+HTML, CSS, React, TypeScript, Sass/Scss
 
 Tools:
 Figma, Github, Git, NPM

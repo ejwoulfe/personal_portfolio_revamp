@@ -20,8 +20,8 @@ function SkillsContainer() {
 
     function createSkills(skillsArr: Skills[]) {
 
-        return skillsArr.map((value) => (
-            <Card  {...value} />
+        return skillsArr.map((value, index) => (
+            <Card key={"card_" + index} {...value} />
         )
         )
     }

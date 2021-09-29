@@ -14,14 +14,13 @@ interface FormElement extends HTMLFormElement {
 
 function ContactForm() {
 
-    const [formObject, setFormObject] = useState<FormElement>();
+    const [formObject] = useState<string>(('.contact_form'));
 
 
 
     // Retrieve all input field values, and put them into an object for validation.
     function getInputFieldValues(event: React.FormEvent<FormElement>) {
         event.preventDefault();
-        setFormObject(event.target as FormElement);
 
 
 
@@ -71,11 +70,12 @@ function ContactForm() {
 
 
 
+
         await emailjs.sendForm('gmail_id', 'template_aye077j', formObject, process.env.REACT_APP_USER_ID)
             .then((result) => {
 
                 if (result.text === "OK") {
-                    formObject.reset();
+                    // document.querySelector(formObject).reset();
 
                 }
             }, (error) => {
