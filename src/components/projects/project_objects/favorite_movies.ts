@@ -14,7 +14,7 @@ let favoriteMoviesProject: Project = new PersonalProject(
     projectImage, {
     HTML5: html5,
     CSS3: css3,
-    Javascript: javascript,
+    JavaScript: javascript,
     React: react,
     Sass: sass,
     Node: node,

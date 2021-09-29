@@ -1,29 +1,18 @@
 import './contact_form.scss';
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
+import { FormElement } from '../../../interfaces/form_elements';
 
 
-interface FormElements extends HTMLFormControlsCollection {
-    name: HTMLInputElement,
-    email: HTMLInputElement,
-    message: HTMLTextAreaElement
-}
-interface FormElement extends HTMLFormElement {
-    elements: FormElements
-}
 
 function ContactForm() {
 
-    const [formObject] = useState<string>(('.contact_form'));
-
+    const [formQuerySelector] = useState<string>(('.contact_form'));
 
 
     // Retrieve all input field values, and put them into an object for validation.
     function getInputFieldValues(event: React.FormEvent<FormElement>) {
         event.preventDefault();
-
-
-
 
         let inputValues = [
             event.currentTarget.elements.name.value,
@@ -31,9 +20,7 @@ function ContactForm() {
             event.currentTarget.elements.message.value
         ]
 
-
         validateFields(inputValues);
-
     }
 
     // Function to validate the input fields.
@@ -52,15 +39,12 @@ function ContactForm() {
         if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(inputValues[1]))) {
 
             alert("The email address entered is invalid.");
-
             return false;
 
         }
 
-
+        // If the input fields pass all validations then call the sendEmail function to send the information.
         sendEmail();
-
-
     }
 
 
@@ -68,14 +52,10 @@ function ContactForm() {
     // Function to send email to address using emailjs.
     async function sendEmail() {
 
-
-
-
-        await emailjs.sendForm('gmail_id', 'template_aye077j', formObject, process.env.REACT_APP_USER_ID)
+        await emailjs.sendForm('gmail_id', 'template_aye077j', formQuerySelector, process.env.REACT_APP_USER_ID)
             .then((result) => {
 
                 if (result.text === "OK") {
-                    // document.querySelector(formObject).reset();
 
                 }
             }, (error) => {
@@ -84,11 +64,7 @@ function ContactForm() {
             });
 
         disableButton();
-
     }
-
-
-
 
     // Disable send button and input fields on successful message sent.
     function disableButton() {
@@ -100,11 +76,12 @@ function ContactForm() {
         // Iterating through all the input fields.
         for (let i = 0; i < document.getElementsByTagName('input').length; i++) {
             document.getElementsByTagName('input')[i].disabled = true;
+            document.getElementsByTagName('input')[i].value = "";
             document.getElementsByTagName('input')[i].style.backgroundColor = '#8888887c';
         }
         // Disable the message text area.
         document.getElementsByTagName('textarea')[0].disabled = true;
-        document.getElementsByTagName('textarea')[0].style.backgroundColor = '#8888887c';
+        document.getElementsByTagName('textarea')[0].value = "";
     }
 
 

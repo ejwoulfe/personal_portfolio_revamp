@@ -5,6 +5,7 @@ import react from '../../../assets/icons/png/react.png';
 import sass from '../../../assets/icons/png/sass.png';
 import bootstrap from '../../../assets/icons/svg/bootstrap.svg';
 import jquery from '../../../assets/icons/png/jquery.png';
+import typescript from '../../../assets/icons/svg/typescript.svg';
 import PersonalSkills from '../../../models/skills_model';
 import Skills from '../../../interfaces/skills_interface';
 
@@ -13,7 +14,8 @@ let frontEndSkills: Skills = new PersonalSkills(
     "Front End", {
     HTML5: html5,
     CSS3: css3,
-    Javascript: javascript,
+    JavaScript: javascript,
+    TypeScript: typescript,
     React: react,
     Sass: sass
 }, {
