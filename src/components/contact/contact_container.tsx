@@ -1,8 +1,7 @@
-import React from 'react';
 import './contact.scss';
 import ContactForm from './contact_form/contact_form';
 
-function Contact() {
+function ContactContainer() {
     return (
 
         <div id="contact">
@@ -16,4 +15,4 @@ function Contact() {
     )
 }
 
-export default Contact;
+export default ContactContainer;

@@ -23,6 +23,8 @@ function ToTopButton() {
             topButton.style.display = "none";
         }
     }
+
+
     return (
         <button onClick={() => toTheTopOfPage()} id="to_top_button" title="Go to the top of the page">
             <img src={upArrow} alt="Up arrow"></img>

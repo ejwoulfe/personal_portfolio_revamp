@@ -1,37 +1,48 @@
-import React from 'react';
 import './contact_form.scss';
 import emailjs from 'emailjs-com';
+import { useState } from 'react';
+
+
+interface FormElements extends HTMLFormControlsCollection {
+    name: HTMLInputElement,
+    email: HTMLInputElement,
+    message: HTMLTextAreaElement
+}
+interface FormElement extends HTMLFormElement {
+    elements: FormElements
+}
 
 function ContactForm() {
 
+    const [formObject, setFormObject] = useState<FormElement>();
 
-    // Retrieve all input field values, ignoring the send button, and put them into an array for validation.
-    function getInputFieldValues(form) {
 
-        let inputValuesArray = [];
 
-        for (let i = 0; i < form.length; i++) {
+    // Retrieve all input field values, and put them into an object for validation.
+    function getInputFieldValues(event: React.FormEvent<FormElement>) {
+        event.preventDefault();
+        setFormObject(event.target as FormElement);
 
-            if (form[i].id !== "send_button") {
 
-                inputValuesArray.push(form[i].value);
 
-            }
-        }
 
-        return inputValuesArray;
+        let inputValues = [
+            event.currentTarget.elements.name.value,
+            event.currentTarget.elements.email.value,
+            event.currentTarget.elements.message.value
+        ]
+
+
+        validateFields(inputValues);
+
     }
 
     // Function to validate the input fields.
-    async function validateFields(event) {
+    function validateFields(inputValues: string[]): boolean {
 
-        event.preventDefault();
-        let formObject = event.target;
-        let formFieldValues = await getInputFieldValues(formObject)
-
-        // Check if each field isn't empty.
-        for (let i = 0; i < formFieldValues.length; i++) {
-            if (formFieldValues[i].length < 1) {
+        // // Check if each field isn't empty.
+        for (let i = 0; i < inputValues.length; i++) {
+            if (inputValues[i].length < 1) {
 
                 alert("Please make sure all fields are filled.");
                 return false;
@@ -39,7 +50,7 @@ function ContactForm() {
         }
 
         // Check if email is a valid email.
-        if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(formFieldValues[1]))) {
+        if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(inputValues[1]))) {
 
             alert("The email address entered is invalid.");
 
@@ -47,21 +58,24 @@ function ContactForm() {
 
         }
 
-        // If all validations pass, we call the send email function.
-        sendEmail(formObject);
+
+        sendEmail();
+
+
     }
 
 
 
     // Function to send email to address using emailjs.
-    async function sendEmail(form) {
+    async function sendEmail() {
 
 
-        await emailjs.sendForm('gmail_id', 'template_aye077j', form, process.env.REACT_APP_USER_ID)
+
+        await emailjs.sendForm('gmail_id', 'template_aye077j', formObject, process.env.REACT_APP_USER_ID)
             .then((result) => {
 
                 if (result.text === "OK") {
-                    form.reset();
+                    formObject.reset();
 
                 }
             }, (error) => {
@@ -79,7 +93,7 @@ function ContactForm() {
     // Disable send button and input fields on successful message sent.
     function disableButton() {
 
-        document.getElementById('send_button').value = 'Sent!';
+        (document.getElementById('send_button') as HTMLInputElement).value = 'Sent!';
         document.getElementById('send_button').style.border = 'none';
         document.getElementById('send_button').style.boxShadow = 'none';
 
@@ -96,13 +110,13 @@ function ContactForm() {
 
     return (
 
-        <form data-testid="contact-form" className="contact_form" onSubmit={validateFields}>
+        <form data-testid="contact-form" className="contact_form" onSubmit={getInputFieldValues}>
             <label htmlFor="name_input" className="form_label">Name</label>
             <input id="name_input" className="form_field" type="text" name="name" />
             <label htmlFor="email_input" className="form_label">Email</label>
             <input id="email_input" className="form_field" type="email" name="email" />
             <label htmlFor="form_text_area" className="form_label">Message</label>
-            <textarea className="form_field" id="form_text_area" maxLength="200" name="message" />
+            <textarea id="form_text_area" className="form_field" maxLength={200} name="message" />
             <input id="send_button" type="submit" value="Send" />
         </form>
     );

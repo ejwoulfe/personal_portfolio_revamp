@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './about.scss';
 import greatWall from '../../assets/about_section_images/greatwall.jpg';
 import bigelowMtn from '../../assets/about_section_images/bigelow_mtn.jpg';
@@ -7,8 +7,8 @@ import chinaTown from '../../assets/about_section_images/china_town.jpg';
 function About() {
 
     // State to hold the pictures in an array and to track what the current index is.
-    const [imageGallery, setImageGallery] = useState([]);
-    const [currentImgNum, setCurrentImgNum] = useState(0);
+    const [imageGallery, setImageGallery] = useState<string[]>([]);
+    const [currentImgNum, setCurrentImgNum] = useState<number>(0);
 
     useEffect(() => {
         setImageGallery([greatWall, bigelowMtn, chinaTown]);
@@ -16,7 +16,7 @@ function About() {
 
 
     // Create buttons for each picture in the array. The index of the current picture in the array will be greyed out.
-    function createImageButtons(images) {
+    function createImageButtons(images: string[]): JSX.Element[] {
         return (
             images.map((image, index) => {
                 if (index === currentImgNum) {
@@ -29,7 +29,7 @@ function About() {
         )
     }
 
-    function imageCarousel(images) {
+    function imageCarousel(images: string[]): JSX.Element {
         if (images.length > 0) {
             return (
                 <div id="image_carousel">
