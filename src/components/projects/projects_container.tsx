@@ -5,6 +5,7 @@ import './projects.scss';
 import favMoviesProject from './project_objects/favorite_movies';
 import lolChampionsProject from './project_objects/lol_champions';
 import bdoProfitProject from './project_objects/bdoprofit';
+import ffxivccProject from './project_objects/ffxivcc';
 import { Project } from '../../interfaces/project_interface';
 
 
@@ -17,7 +18,7 @@ function ProjectsContainer() {
 
     useEffect(() => {
 
-        setProjectArray([lolChampionsProject, bdoProfitProject, favMoviesProject,])
+        setProjectArray([ffxivccProject, lolChampionsProject, bdoProfitProject, favMoviesProject,])
 
     }, [])
 
