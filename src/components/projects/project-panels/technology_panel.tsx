@@ -37,7 +37,7 @@ function TechnologyPanel({ name, image, githubURL, liveURL, videoURL, techStack 
     function createLiveWebsiteIcon(url: string): JSX.Element {
 
         // Check if the project has a live website or not, indicated by a string if not.
-        if (url === "Work in progress.") {
+        if (url === "WIP") {
             return (
                 <span>
                     <img src={wrench} alt="website is still a work in progress."></img>

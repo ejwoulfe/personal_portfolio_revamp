@@ -1,4 +1,4 @@
-@import "../../util/varibales";
+@import "../../util/variables";
 @import "../../util/mixins";
 
 #about {
@@ -23,7 +23,6 @@
     padding-top: 2rem;
     justify-content: center;
     align-items: center;
-
 
     #image_carousel,
     #about_text_container {
@@ -82,7 +81,6 @@
       }
 
       #border_right {
-
         height: 3rem;
         border-bottom: solid 1px $red-pink;
         border-right: solid 1px $red-pink;

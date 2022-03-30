@@ -9,10 +9,8 @@ export default class PersonalProject {
     githubURL: string;
     videoURL: string;
     description: string[];
-    goals: string[];
-    accomplishments: string[];
 
-    constructor(name: string, image: string, techStack: techStack, liveURL: string, githubURL: string, videoURL: string, description: string[], goals: string[], accomplishments: string[]) {
+    constructor(name: string, image: string, techStack: techStack, liveURL: string, githubURL: string, videoURL: string, description: string[]) {
         this.name = name;
         this.image = image;
         this.techStack = techStack;
@@ -20,7 +18,5 @@ export default class PersonalProject {
         this.githubURL = githubURL;
         this.videoURL = videoURL;
         this.description = description;
-        this.goals = goals;
-        this.accomplishments = accomplishments;
     }
 }

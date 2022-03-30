@@ -3,13 +3,11 @@ export interface techStack {
 };
 
 export interface Project {
-    name: string;
-    image: string;
-    techStack: techStack;
-    liveURL: string;
-    githubURL: string;
-    videoURL: string;
-    description: string[];
-    goals: string[];
-    accomplishments: string[];
+    name: string,
+    image: string,
+    techStack: techStack,
+    liveURL: string,
+    githubURL: string,
+    videoURL: string,
+    description: string[]
 }

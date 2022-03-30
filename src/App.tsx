@@ -6,10 +6,9 @@ import About from './components/about/about';
 import ContactContainer from './components/contact/contact_container';
 import ToTopButton from './components/to_top_button/to_top_button';
 
-
-
 function App() {
     return (
+
 
         <div id="main_content">
             <Navigation></Navigation>

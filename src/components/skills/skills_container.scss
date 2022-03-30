@@ -1,12 +1,10 @@
-@import '../../util/varibales';
+@import "../../util/variables";
 
 #skills {
-
     max-width: $max-width-large;
     background-color: #000000;
 
     #cards {
-
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;

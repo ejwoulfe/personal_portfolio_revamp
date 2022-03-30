@@ -1,10 +1,10 @@
-@import "../../util/varibales";
+@import "../../util/variables";
 @import "../../util/mixins";
 
 #contact {
   max-width: $max-width-large;
   text-align: center;
-  background: url('../../assets/contact_section_images/contact-background.png');
+  background: url("../../assets/contact_section_images/contact-background.png");
   background-size: cover;
   background-position: 25% 25%;
   background-repeat: no-repeat;

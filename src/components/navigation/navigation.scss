@@ -1,4 +1,4 @@
-@import '../../util/varibales';
+@import "../../util/variables";
 
 #navigation {
     background-color: #000000;
@@ -49,6 +49,5 @@
                 filter: invert(39%) sepia(91%) saturate(3915%) hue-rotate(312deg) brightness(88%) contrast(90%);
             }
         }
-
     }
 }

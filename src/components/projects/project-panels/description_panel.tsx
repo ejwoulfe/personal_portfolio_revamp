@@ -2,7 +2,7 @@ import { Project } from '../../../interfaces/project_interface';
 import './description_panel.scss';
 
 
-function DescriptionPanel({ description, goals, accomplishments }: Project) {
+function DescriptionPanel({ description }: Project) {
 
 
 
@@ -44,24 +44,6 @@ function DescriptionPanel({ description, goals, accomplishments }: Project) {
                 <h3>Description</h3>
 
                 {arrayIntoDescription(description)}
-
-            </div>
-
-            <div className="goals">
-                <h3>Goals</h3>
-
-                {arrayIntoListFormat(goals)}
-
-            </div>
-
-            <div className="accomplishments">
-                <h3>Accomplishments</h3>
-
-                {arrayIntoListFormat(accomplishments)}
-
-
-                <div className="border_bottom_right"></div>
-
 
             </div>
 
