@@ -1,0 +1,74 @@
+@import "../../../util/variables";
+
+#project_cards_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.project_info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 45%;
+    align-items: center;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    background-color: $dark-black;
+    border-radius: 10px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    .project_image {
+        width: 800px;
+        height: 400px;
+        box-shadow: 5px 5px 0px -2px $red-pink;
+    }
+
+    .project_name {
+        font-size: 32px;
+    }
+}
+
+.over_space {
+    width: 95%;
+    margin-bottom: 5rem;
+}
+
+.under_space {
+    width: 95%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.over_space {
+    width: 95%;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+
+.learn_more_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 5px;
+    align-items: center;
+
+    .learn_more {
+        font-size: 24px;
+        padding-right: 10px;
+    }
+
+    .arrow_right {
+        padding-right: 20px;
+        width: 60px;
+        height: 52px;
+        filter: invert(34%) sepia(73%) saturate(3070%) hue-rotate(330deg) brightness(88%) contrast(90%);
+    }
+}

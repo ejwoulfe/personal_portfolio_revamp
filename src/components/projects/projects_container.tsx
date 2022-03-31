@@ -4,8 +4,8 @@ import favMoviesProject from './project_objects/favorite_movies';
 import lolChampionsProject from './project_objects/lol_champions';
 import bdoProfitProject from './project_objects/bdoprofit';
 import ffxivccProject from './project_objects/ffxivcc';
-import arrow from '../../assets/icons/png/arrow-right.png';
 import { Project } from '../../interfaces/project_interface';
+import ProjectCards from './project_cards/project_cards';
 
 
 
@@ -22,27 +22,6 @@ function ProjectsContainer() {
     }, [])
 
 
-    function createProjects(projectsArr: Project[]): JSX.Element[] {
-
-        return projectsArr.map((project, index) => (
-
-
-
-            <div key={"project_" + index + 1} className="project_info" >
-                <div className="over_space"></div>
-                <h1 className="project_name">{project.name}</h1>
-                <img className="project_image" src={project.image} alt={project.name}></img>
-
-                <div className="learn_more_container">
-                    <h3 className="learn_more"> Learn More </h3>
-                    <img className="arrow_right" src={arrow} alt="arrow pointing right"></img>
-                </div>
-                <div className="under_space"></div>
-            </div >
-
-        ))
-    }
-
 
     return (
         <div id="projects">
@@ -51,7 +30,8 @@ function ProjectsContainer() {
             </div>
 
             <div id="projects-container">
-                {projectArray.length > 0 ? createProjects(projectArray) : <h4>Loading Projects</h4>}
+
+                {projectArray.length > 0 ? <ProjectCards data={{ projectArray }} /> : <h4>Loading Projects</h4>}
             </div>
 
         </div>
