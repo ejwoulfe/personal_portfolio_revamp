@@ -5,7 +5,8 @@ import lolChampionsProject from './project_objects/lol_champions';
 import bdoProfitProject from './project_objects/bdoprofit';
 import ffxivccProject from './project_objects/ffxivcc';
 import { Project } from '../../interfaces/project_interface';
-import ProjectCards from './project_cards/project_cards';
+import ProjectsList from './projects_list/projects_list';
+import ProjectDescription from './project_description/project_description';
 
 
 
@@ -13,6 +14,7 @@ function ProjectsContainer() {
 
     // State to hold each skill object and an array which holds all the skill objects.
     const [projectArray, setProjectArray] = useState<Project[]>([]);
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
 
     useEffect(() => {
@@ -31,7 +33,9 @@ function ProjectsContainer() {
 
             <div id="projects-container">
 
-                {projectArray.length > 0 ? <ProjectCards data={{ projectArray }} /> : <h4>Loading Projects</h4>}
+                {selectedProject === null ?
+                    <ProjectsList data={{ projectArray, setSelectedProject }} /> :
+                    <ProjectDescription project={selectedProject} />}
             </div>
 
         </div>

@@ -1,15 +1,16 @@
 
 import { Project } from '../../../interfaces/project_interface';
 import arrow from '../../../assets/icons/png/arrow-right.png';
-import './project_cards.scss';
+import './projects_list.scss';
 
 interface CardProps {
-    projectArray: Project[]
+    projectArray: Project[],
+    setSelectedProject: React.Dispatch<React.SetStateAction<Project>>
 }
 
-function ProjectCards(props: { data: CardProps }) {
+function ProjectsList(props: { data: CardProps }) {
 
-    const { projectArray } = props.data;
+    const { projectArray, setSelectedProject } = props.data;
 
     return (
         <div id="project_cards_container">
@@ -17,7 +18,7 @@ function ProjectCards(props: { data: CardProps }) {
 
 
 
-                <div key={"project_" + index + 1} className="project_info" >
+                <div key={"project_" + index + 1} className="project_info" onClick={() => { setSelectedProject(project) }}>
                     <div className="over_space"></div>
                     <h1 className="project_name">{project.name}</h1>
                     <img className="project_image" src={project.image} alt={project.name}></img>
@@ -35,4 +36,4 @@ function ProjectCards(props: { data: CardProps }) {
     );
 }
 
-export default ProjectCards;
+export default ProjectsList;
