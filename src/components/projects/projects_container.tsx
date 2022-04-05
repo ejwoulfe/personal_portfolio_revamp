@@ -4,6 +4,7 @@ import favMoviesProject from './project_objects/favorite_movies';
 import lolChampionsProject from './project_objects/lol_champions';
 import bdoProfitProject from './project_objects/bdoprofit';
 import ffxivccProject from './project_objects/ffxivcc';
+import backArrow from '../../assets/icons/svg/back-arrow.svg';
 import { Project } from '../../interfaces/project_interface';
 import ProjectsList from './projects_list/projects_list';
 import ProjectDescription from './project_description/project_description';
@@ -27,8 +28,18 @@ function ProjectsContainer() {
 
     return (
         <div id="projects">
+            {selectedProject === null ?
+                null :
+                <button id="projects_back_button" onClick={() => { setSelectedProject(null) }}>
+                    <img src={backArrow} alt="back button" />
+                </button>
+            }
+
             <div className="header">
-                <h1 className="header_text">Projects</h1>
+                {selectedProject === null ?
+                    <h1 className="header_text">Projects</h1> :
+                    <h1 className="header_text">{selectedProject.name}</h1>
+                }
             </div>
 
             <div id="projects-container">
