@@ -24,10 +24,10 @@ let ffxivccProject: Project = new PersonalProject(
     TypeScript: typescript,
     ReduxToolKit: redux
 },
-    "WIP",
+    "none",
     "https://github.com/ejwoulfe/FFXIV-crafting-calculator",
     "75jnHmUn5_0",
-    ["Favorite Movies allows a user to browse for their favorite movies or actors and gives them a brief description about that person/movie.", "The user will then be able to favorite a movie and have a collection of their favorites displayed on their account page."]
+    ["FFXIV Crafting Calculator is a full stack web app that calculates the profit margins of an in-game craft. It will give a list of all the required materials and their quantites that are needed in order to craft a recipe. Then using a third party API it retrieves the current listings of those materials on the marketboard that a user can purchase from. Using an algorithm I created it will grab the cheapest combinations of marketboard listings to meet the materials required quantity. It will gather the totals of all materials and lookup what the current marketboard value is for the recipe and calculate a profit, if it exists."]
 
 )
 

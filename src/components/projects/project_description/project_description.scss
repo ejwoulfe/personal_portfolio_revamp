@@ -54,15 +54,23 @@
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
         span{
             width: 33%;
+            
         }
 
         .links_icon {
             height: 40px;
             width: 40px;
+            cursor: pointer;
+           
+        }
+        .links_icon_disabled{
+            height: 40px;
+            width: 40px;
+            cursor: normal;
         }
     }
     
