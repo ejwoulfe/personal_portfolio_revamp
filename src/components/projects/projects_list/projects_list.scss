@@ -23,8 +23,7 @@
     }
 
     .project_image {
-        width: 800px;
-        height: 400px;
+        width: 85%;
         box-shadow: 5px 5px 0px -2px $red-pink;
     }
 
@@ -70,5 +69,11 @@
         width: 60px;
         height: 52px;
         filter: invert(34%) sepia(73%) saturate(3070%) hue-rotate(330deg) brightness(88%) contrast(90%);
+    }
+}
+
+@media (max-width: 1000px){
+    .project_info {
+        flex: 100%;
     }
 }
