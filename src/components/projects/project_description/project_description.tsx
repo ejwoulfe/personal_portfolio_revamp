@@ -92,7 +92,7 @@ function ProjectDescription(props: DescriptionProps) {
                         <div className="border_top_left"></div>
                         <h2>Description</h2>
 
-                        <p>{project.description}</p>
+                        <p>{project.description.map((desc => desc + " "))}</p>
 
                     </div>
                     <div id="tech_stack_container">
