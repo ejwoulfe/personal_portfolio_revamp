@@ -1,6 +1,7 @@
 @import "../../util/variables";
 
-#banner {
+.banner {
+  position: relative;
   background-color: #000000;
   display: flex;
   flex-wrap: nowrap;
@@ -9,74 +10,20 @@
   margin-top: 80px;
   justify-content: center;
   min-height: 900px;
-}
+  overflow: hidden;
 
-#left_shape {
-  height: 60%;
-  width: 33%;
-  padding-top: 5%;
-}
-
-#right_shape {
-  height: 60%;
-  width: 33%;
-}
-
-#personal_info {
-  color: white;
-  font-family: $title-font;
-  display: flex;
-  flex-flow: column nowrap;
-  width: 25%;
-
-  h1 {
-    font-weight: $regular;
-    font-size: $banner-role-font-size;
-    margin: 1rem;
-    flex-shrink: 0;
-    flex-grow: 0;
-
-    &::after {
-      content: "";
-      display: block;
-      margin: 0 auto;
-      width: 70%;
-      border-bottom: 4px solid $red-pink;
+  div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    img {
+      height: 64px;
+      width: 64px;
+      fill: white;
+      &:hover {
+        color: red;
+      }
     }
-  }
-
-  #name {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-  }
-
-  #role {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-  }
-}
-
-@media (max-width: 1424px) {
-  .loader {
-    margin-top: 250px;
-  }
-
-  #main_content #banner {
-    min-height: 40rem;
-  }
-}
-
-@media (max-width: 949px) {
-  #main_content #banner {
-    min-height: 30rem;
-  }
-}
-
-@media (max-width: 610px) {
-  #personal_info #name,
-  #personal_info #role {
-    justify-content: center;
   }
 }
